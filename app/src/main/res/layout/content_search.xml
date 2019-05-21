@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".Activities.Appointments.DoctorSearchActivity"
+    tools:showIn="@layout/activity_search">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@color/colorPrimary">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_margin="@dimen/dp_10">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_margin="@dimen/dp_10"
+                        android:padding="@dimen/dp_5"
+                        android:background="@drawable/round_edge_white">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@mipmap/search_primary"/>
+
+                        <AutoCompleteTextView
+                            android:id="@+id/search_autocompletetext"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:hint="Search Doctors Here..."
+                            android:textColorHint="@color/textPrimary"
+                            android:textColor="@color/textPrimary"
+                            android:gravity="center_vertical"
+                            android:layout_gravity="center_vertical"
+                            android:textSize="@dimen/sp_14"
+                            android:background="@color/white"
+                            android:paddingLeft="@dimen/dp_5"
+                            android:ems="10"
+                            android:inputType="text"
+                            android:singleLine="true"
+                            android:imeOptions="actionDone" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/search_cancel"
+                            android:src="@mipmap/cancel_icon"/>
+
+                    </LinearLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <com.fdc.pixelcare.Views.CustomTextViewItalicBold
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="No records found !!!"
+                android:gravity="center"
+                android:visibility="gone"
+                android:id="@+id/search_noresult"
+                android:layout_margin="@dimen/dp_10"
+                android:textSize="@dimen/sp_24"
+                android:textColor="@color/textPrimary"/>
+
+            <ListView
+                android:id="@+id/search_listview"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:scrollbars="none"
+                android:divider="@android:color/transparent"
+                android:dividerHeight="1dp"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="64dp"
+                android:id="@+id/search_progressbar">
+
+                <com.omjoonkim.skeletonloadingview.SkeletonLoadingView
+                    android:id="@+id/skeletonView1"
+                    android:layout_width="42dp"
+                    android:layout_height="42dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="16dp"
+                    app:baseColor="#fbfbfb"
+                    app:deepColor="#f2f2f2"
+                    app:duration="1500"
+                    app:interval="1000"
+                    app:progressLength="120dp"
+                    app:radius="42dp"
+                    />
+
+                <com.omjoonkim.skeletonloadingview.SkeletonLoadingView
+                    android:id="@+id/skeletonView2"
+                    android:layout_width="210dp"
+                    android:layout_height="8dp"
+                    android:layout_marginLeft="70dp"
+                    android:layout_marginTop="18dp"
+                    app:baseColor="#fbfbfb"
+                    app:deepColor="#f2f2f2"
+                    app:duration="1500"
+                    app:interval="1000"
+                    app:progressLength="120dp"
+                    app:radius="5dp"
+                    />
+
+                <com.omjoonkim.skeletonloadingview.SkeletonLoadingView
+                    android:id="@+id/skeletonView3"
+                    android:layout_width="100dp"
+                    android:layout_height="12dp"
+                    android:layout_marginLeft="70dp"
+                    android:layout_marginTop="34dp"
+                    app:baseColor="#fbfbfb"
+                    app:deepColor="#f2f2f2"
+                    app:duration="1500"
+                    app:interval="1000"
+                    app:progressLength="120dp"
+                    app:radius="5dp"
+                    />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="#f2f2f2"/>
+            </RelativeLayout>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</LinearLayout>

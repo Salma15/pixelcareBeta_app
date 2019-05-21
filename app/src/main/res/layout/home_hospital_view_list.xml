@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/hosp_view_item"
+    android:background="?android:attr/selectableItemBackground"
+    android:clickable="true"
+    android:focusable="true"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="@dimen/dp_10">
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_gravity="center">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/hosp_view_image"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@mipmap/hospital_icon"
+            app:civ_border_width="2dp"
+            android:layout_marginTop="@dimen/dp_2"
+            android:layout_marginLeft="15dp"
+            app:civ_border_color="@color/light_bg7"/>
+
+        <ImageView
+            android:id="@+id/hosp_view_star"
+            android:src="@mipmap/star_gold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </FrameLayout>
+
+
+    <com.fdc.pixelcare.Views.CustomTextViewSemiBold
+        android:id="@+id/hosp_view_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxWidth="@dimen/dp_100"
+        android:text="Name"
+        android:maxLines="2"
+        android:textColor="@color/textPrimary"
+        android:textSize="@dimen/sp_12"
+        android:gravity="center"
+        android:layout_gravity="center"/>
+
+    <com.fdc.pixelcare.Views.CustomTextView
+        android:id="@+id/hosp_view_city"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="City"
+        android:maxLines="1"
+        android:textColor="@color/textSecondary"
+        android:textSize="@dimen/sp_10"
+        android:gravity="center"
+        android:layout_marginTop="@dimen/dp_2"
+        android:layout_gravity="center"/>
+
+</LinearLayout>

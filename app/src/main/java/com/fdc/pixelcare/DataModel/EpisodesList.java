@@ -1,0 +1,305 @@
+package com.fdc.pixelcare.DataModel;
+
+import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.List;
+
+/**
+ * Created by lenovo on 14/09/2017.
+ */
+
+public class EpisodesList implements Serializable {
+    int episode_id, admin_id, patient_id, emr_type;
+    String followup_date,  diagnosis_details, treatment_details, episode_created_date, consultation_fees, prescription_note, doctorName, patientName;
+    List<ChiefMedicalComplaint> PATIENT_CHIEF_MEDCOMPLAINT_ARRAY;
+    List<Investigations> PATIENT_INVESTIGATION_GENERAL_ARRAY, PATIENT_INVESTIGATION_OPHTHAL_ARRAY;
+    List<Diagnosis> PATIENT_DAIGNOSIS_ARRAY;
+    List<Treatments> PATIENT_TREATMENT_ARRAY;
+    List<FrequentPrescription> PATIENT_PRESCRIPTION_ARRAY;
+    List<Lids> PATIENT_LIDS_ARRAY;
+    List<OphthalConjuctiva> PATIENT_CONJUCTIVA_ARRAY;
+    List<OphthalSclera> PATIENT_SCLERA_ARRAY;
+    List<OphthalCornearAnteriorSurface> PATIENT_CORNEA_ANTERIOR_ARRAY;
+    List<OphthalCornearPosteriorSurface> PATIENT_CORNEA_POSTERIOR_ARRAY;
+    List<OphthalAnteriorChamber> PATIENT_ANTERIOR_CHAMBER_ARRAY;
+    List<OphthalIris> PATIENT_IRIS_ARRAY;
+    List<OphthalPupil> PATIENT_PUPIL_ARRAY;
+    List<OphthalAngleAnteriorChamber> PATIENT_ANGLE_ARRAY;
+    List<OphthalLens> PATIENT_LENS_ARRAY;
+    List<OphthalViterous> PATIENT_VITEROUS_ARRAY;
+    List<OphthalFundus> PATIENT_FUNDUS_ARRAY;
+    List<Examinations> PATIENT_EXAMINATION_ARRAY;
+    List<DrugAllery> PATIENT_DRUG_ALLERTY_ARRAY;
+    List<DrugAbuse> PATIENT_DRUG_ABUSE_ARRAY;
+    List<FamilyHistory> PATIENT_FAMILY_HISTORY_ARRAY;
+    List<ViewReports> PATIENT_REPORTS_ARRAY;
+    List<TrendAnalysisList> PATIENT_TREND_ANALYSIS = new ArrayList<>();
+    List<TrendOphthalAnalysisList> PATIENT_OPHTHAL_TREND_ANALYSIS = new ArrayList<>();
+
+    String GET_DV_SPHERE_RIGHT, GET_DV_CYCLE_RIGHT, GET_DV_AXIS_RIGHT;
+    String GET_NV_SPHERE_RIGHT, GET_NV_CYCLE_RIGHT, GET_NV_AXIS_RIGHT;
+    String GET_IPD_RIGHT;
+    String GET_DV_SPHERE_LEFT, GET_DV_CYCLE_LEFT, GET_DV_AXIS_LEFT;
+    String GET_NV_SPHERE_LEFT, GET_NV_CYCLE_LEFT, GET_NV_AXIS_LEFT;
+    String GET_IPD_LEFT;
+    String DISTANCE_VISION_RE, DISTANCE_VISION_LE, NEAR_VISION_RE, NEAR_VISION_LE;
+    String REFRACTION_RE_VALUE1, REFRACTION_RE_VALUE2, REFRACTION_LE_VALUE1, REFRACTION_LE_VALUE2;
+
+    public EpisodesList(int episode_id, int emr_type, int ref_id, String docName, int patient_id, String patient_name, String next_followup_date, String diagnosis_details,
+                        String treatment_details, String prescription_note, String date_time, String consultation_fees,
+                        List<ChiefMedicalComplaint> patient_chief_medcomplaint_array, List<Investigations> patient_investigation_general_array,
+                        List<Investigations> patient_investigation_ophthal_array, List<Diagnosis> patient_daignosis_array,
+                        List<Treatments> patient_treatment_array, List<FrequentPrescription> patient_prescription_array,
+                        List<Lids> patient_lids_array, List<OphthalConjuctiva> patient_conjuctiva_array,
+                        List<OphthalSclera> patient_sclera_array, List<OphthalCornearAnteriorSurface> patient_cornea_anterior_array,
+                        List<OphthalCornearPosteriorSurface> patient_cornea_posterior_array,
+                        List<OphthalAnteriorChamber> patient_anterior_chamber_array, List<OphthalIris> patient_iris_array,
+                        List<OphthalPupil> patient_pupil_array, List<OphthalAngleAnteriorChamber> patient_angle_array,
+                        List<OphthalLens> patient_lens_array, List<OphthalViterous> patient_viterous_array,
+                        List<OphthalFundus> patient_fundus_array, List<Examinations> patient_examination_array,
+                        List<DrugAllery> patient_drug_allergy_array,  List<DrugAbuse> patient_drug_abuse_array,  List<FamilyHistory> patient_family_history_array,
+                        List<ViewReports> patient_reports_array, List<TrendAnalysisList> patient_trends_array, List<TrendOphthalAnalysisList> patient_ophthal_trends_array,
+                        String refractionRE_value1, String refractionRE_value2, String refractionLE_value1, String refractionLE_value2, String distVisionRE,
+                        String distVisionLE, String nearVisionRE, String nearVisionLE, String dvSphereRE, String dvCylRE,
+                        String dvAxisRE, String dvSpeherLE, String dvCylLE, String dvAxisLE, String nvSpeherRE, String nvCylRE,
+                        String nvAxisRE, String nvSpeherLE, String nvCylLE, String nvAxisLE, String ipdRE, String ipdLE) {
+
+        this.episode_id = episode_id;
+        this.emr_type = emr_type;
+        this.admin_id = ref_id;
+        this.doctorName =docName;
+        this.patient_id = patient_id;
+        this.patientName = patient_name;
+        this.followup_date = next_followup_date;
+        this.diagnosis_details = diagnosis_details;
+        this.treatment_details = treatment_details;
+        this.prescription_note = prescription_note;
+        this.episode_created_date = date_time;
+        this.consultation_fees = consultation_fees;
+        this.PATIENT_CHIEF_MEDCOMPLAINT_ARRAY = patient_chief_medcomplaint_array;
+        this.PATIENT_INVESTIGATION_GENERAL_ARRAY = patient_investigation_general_array;
+        this.PATIENT_INVESTIGATION_OPHTHAL_ARRAY = patient_investigation_ophthal_array;
+        this.PATIENT_DAIGNOSIS_ARRAY = patient_daignosis_array;
+        this.PATIENT_TREATMENT_ARRAY = patient_treatment_array;
+        this.PATIENT_PRESCRIPTION_ARRAY = patient_prescription_array;
+        this.PATIENT_LIDS_ARRAY = patient_lids_array;
+        this.PATIENT_CONJUCTIVA_ARRAY = patient_conjuctiva_array;
+        this.PATIENT_SCLERA_ARRAY = patient_sclera_array;
+        this.PATIENT_CORNEA_ANTERIOR_ARRAY = patient_cornea_anterior_array;
+        this.PATIENT_CORNEA_POSTERIOR_ARRAY = patient_cornea_posterior_array;
+        this.PATIENT_ANTERIOR_CHAMBER_ARRAY = patient_anterior_chamber_array;
+        this.PATIENT_IRIS_ARRAY = patient_iris_array;
+        this.PATIENT_PUPIL_ARRAY = patient_pupil_array;
+        this.PATIENT_ANGLE_ARRAY = patient_angle_array;
+        this.PATIENT_LENS_ARRAY = patient_lens_array;
+        this.PATIENT_VITEROUS_ARRAY = patient_viterous_array;
+        this.PATIENT_FUNDUS_ARRAY = patient_fundus_array;
+        this.PATIENT_EXAMINATION_ARRAY = patient_examination_array;
+        this.PATIENT_DRUG_ALLERTY_ARRAY = patient_drug_allergy_array;
+        this.PATIENT_DRUG_ABUSE_ARRAY = patient_drug_abuse_array;
+        this.PATIENT_FAMILY_HISTORY_ARRAY = patient_family_history_array;
+        this.PATIENT_REPORTS_ARRAY = patient_reports_array;
+        this.PATIENT_TREND_ANALYSIS = patient_trends_array;
+        this.PATIENT_OPHTHAL_TREND_ANALYSIS = patient_ophthal_trends_array;
+        this.REFRACTION_RE_VALUE1 = refractionRE_value1;
+        this.REFRACTION_RE_VALUE2 = refractionRE_value2;
+        this.REFRACTION_LE_VALUE1 = refractionLE_value1;
+        this.REFRACTION_LE_VALUE2 = refractionLE_value2;
+        this.DISTANCE_VISION_RE = distVisionRE;
+        this.DISTANCE_VISION_LE = distVisionLE;
+        this.NEAR_VISION_RE = nearVisionRE;
+        this.NEAR_VISION_LE = nearVisionLE;
+        this.GET_DV_SPHERE_RIGHT = dvSphereRE;
+        this.GET_DV_CYCLE_RIGHT = dvCylRE;
+        this.GET_DV_AXIS_RIGHT = dvAxisRE;
+        this.GET_NV_SPHERE_RIGHT = nvSpeherRE;
+        this.GET_NV_CYCLE_RIGHT = nvCylRE;
+        this.GET_NV_AXIS_RIGHT = nvAxisRE;
+        this.GET_IPD_RIGHT = ipdRE;
+        this.GET_DV_SPHERE_LEFT = dvSpeherLE;
+        this.GET_DV_CYCLE_LEFT = dvCylLE;
+        this.GET_DV_AXIS_LEFT = dvAxisLE;
+        this.GET_NV_SPHERE_LEFT = nvSpeherLE;
+        this.GET_NV_CYCLE_LEFT = nvCylLE;
+        this.GET_NV_AXIS_LEFT = nvAxisLE;
+        this.GET_IPD_LEFT = ipdLE;
+    }
+
+    public  List<TrendOphthalAnalysisList> getOphthalTrendsList() { return PATIENT_OPHTHAL_TREND_ANALYSIS; }
+    public void setOphthalTrendsList( List<TrendOphthalAnalysisList> PATIENT_OPHTHAL_TREND_ANALYSIS) { this.PATIENT_OPHTHAL_TREND_ANALYSIS = PATIENT_OPHTHAL_TREND_ANALYSIS;  }
+
+    public  List<TrendAnalysisList> getTrendsList() { return PATIENT_TREND_ANALYSIS; }
+    public void setTrendsList( List<TrendAnalysisList> PATIENT_TREND_ANALYSIS) { this.PATIENT_TREND_ANALYSIS = PATIENT_TREND_ANALYSIS;  }
+
+    public  List<ViewReports> getReportsList() { return PATIENT_REPORTS_ARRAY; }
+    public void setReportsList( List<ViewReports> PATIENT_REPORTS_ARRAY) { this.PATIENT_REPORTS_ARRAY = PATIENT_REPORTS_ARRAY;  }
+
+    public  List<FamilyHistory> getFamilyHistoryList() { return PATIENT_FAMILY_HISTORY_ARRAY; }
+    public void setFamilyHistoryList( List<FamilyHistory> PATIENT_FAMILY_HISTORY_ARRAY) { this.PATIENT_FAMILY_HISTORY_ARRAY = PATIENT_FAMILY_HISTORY_ARRAY;  }
+
+    public  List<DrugAbuse> getDrugAbuseList() { return PATIENT_DRUG_ABUSE_ARRAY; }
+    public void setDrugAbuseList( List<DrugAbuse> PATIENT_DRUG_ABUSE_ARRAY) { this.PATIENT_DRUG_ABUSE_ARRAY = PATIENT_DRUG_ABUSE_ARRAY;  }
+
+    public  List<DrugAllery> getDrugAllergyList() { return PATIENT_DRUG_ALLERTY_ARRAY; }
+    public void setDrugAllergyList( List<DrugAllery> PATIENT_DRUG_ALLERTY_ARRAY) { this.PATIENT_DRUG_ALLERTY_ARRAY = PATIENT_DRUG_ALLERTY_ARRAY;  }
+
+    public String getEpisodeRefName() { return doctorName; }
+    public void setEpisodeRefName(String doctorName) { this.doctorName = doctorName;  }
+
+    public int getEMRType() { return emr_type; }
+    public void setEMRType(int emr_type) { this.emr_type = emr_type;  }
+
+    public  List<OphthalFundus> getFundusList() { return PATIENT_FUNDUS_ARRAY; }
+    public void setFundusList( List<OphthalFundus> PATIENT_FUNDUS_ARRAY) { this.PATIENT_FUNDUS_ARRAY = PATIENT_FUNDUS_ARRAY;  }
+
+    public  List<OphthalViterous> getViterousList() { return PATIENT_VITEROUS_ARRAY; }
+    public void setViterousList( List<OphthalViterous> PATIENT_VITEROUS_ARRAY) { this.PATIENT_VITEROUS_ARRAY = PATIENT_VITEROUS_ARRAY;  }
+
+    public  List<OphthalLens> getLensList() { return PATIENT_LENS_ARRAY; }
+    public void setLensList( List<OphthalLens> PATIENT_LENS_ARRAY) { this.PATIENT_LENS_ARRAY = PATIENT_LENS_ARRAY;  }
+
+    public  List<OphthalAngleAnteriorChamber> getAngleList() { return PATIENT_ANGLE_ARRAY; }
+    public void setAngleLList( List<OphthalAngleAnteriorChamber> PATIENT_ANGLE_ARRAY) { this.PATIENT_ANGLE_ARRAY = PATIENT_ANGLE_ARRAY;  }
+
+    public  List<OphthalPupil> getPupilList() { return PATIENT_PUPIL_ARRAY; }
+    public void setPupilLList( List<OphthalPupil> PATIENT_PUPIL_ARRAY) { this.PATIENT_PUPIL_ARRAY = PATIENT_PUPIL_ARRAY;  }
+
+    public  List<OphthalIris> getIrisList() { return PATIENT_IRIS_ARRAY; }
+    public void setIrisLList( List<OphthalIris> PATIENT_IRIS_ARRAY) { this.PATIENT_IRIS_ARRAY = PATIENT_IRIS_ARRAY;  }
+
+    public  List<OphthalAnteriorChamber> getAnteriorChamberList() { return PATIENT_ANTERIOR_CHAMBER_ARRAY; }
+    public void setAnteriorChamberList( List<OphthalAnteriorChamber> PATIENT_ANTERIOR_CHAMBER_ARRAY) { this.PATIENT_ANTERIOR_CHAMBER_ARRAY = PATIENT_ANTERIOR_CHAMBER_ARRAY;  }
+
+    public  List<OphthalCornearPosteriorSurface> getCorneaPosteriorList() { return PATIENT_CORNEA_POSTERIOR_ARRAY; }
+    public void setCorneaPosteriorList( List<OphthalCornearPosteriorSurface> PATIENT_CORNEA_POSTERIOR_ARRAY) { this.PATIENT_CORNEA_POSTERIOR_ARRAY = PATIENT_CORNEA_POSTERIOR_ARRAY;  }
+
+    public  List<OphthalCornearAnteriorSurface> getCorneaAnteriorList() { return PATIENT_CORNEA_ANTERIOR_ARRAY; }
+    public void setCorneaAnteriorList( List<OphthalCornearAnteriorSurface> PATIENT_CORNEA_ANTERIOR_ARRAY) { this.PATIENT_CORNEA_ANTERIOR_ARRAY = PATIENT_CORNEA_ANTERIOR_ARRAY;  }
+
+    public  List<OphthalSclera> getScleraList() { return PATIENT_SCLERA_ARRAY; }
+    public void setScleraList( List<OphthalSclera> PATIENT_SCLERA_ARRAY) { this.PATIENT_SCLERA_ARRAY = PATIENT_SCLERA_ARRAY;  }
+
+    public  List<OphthalConjuctiva> getConjuctivaList() { return PATIENT_CONJUCTIVA_ARRAY; }
+    public void setConjuctivaList( List<OphthalConjuctiva> PATIENT_CONJUCTIVA_ARRAY) { this.PATIENT_CONJUCTIVA_ARRAY = PATIENT_CONJUCTIVA_ARRAY;  }
+
+    public  List<Lids> getLidsList() { return PATIENT_LIDS_ARRAY; }
+    public void setLidsList( List<Lids> PATIENT_LIDS_ARRAY) { this.PATIENT_LIDS_ARRAY = PATIENT_LIDS_ARRAY;  }
+
+    public String getEpisodeRefractionLE2() { return REFRACTION_LE_VALUE2; }
+    public void setEpisodeRefractionLE2(String REFRACTION_LE_VALUE2) { this.REFRACTION_LE_VALUE2 = REFRACTION_LE_VALUE2;  }
+
+    public String getEpisodeRefractionLE1() { return REFRACTION_LE_VALUE1; }
+    public void setEpisodeRefractionLE1(String REFRACTION_LE_VALUE1) { this.REFRACTION_LE_VALUE1 = REFRACTION_LE_VALUE1;  }
+
+    public String getEpisodeRefractionRE2() { return REFRACTION_RE_VALUE2; }
+    public void setEpisodeRefractionRE2(String REFRACTION_RE_VALUE2) { this.REFRACTION_RE_VALUE2 = REFRACTION_RE_VALUE2;  }
+
+    public String getEpisodeRefractionRE1() { return REFRACTION_RE_VALUE1; }
+    public void setEpisodeRefractionRE1(String REFRACTION_RE_VALUE1) { this.REFRACTION_RE_VALUE1 = REFRACTION_RE_VALUE1;  }
+
+    public String getEpisodeNearVisionLE() { return NEAR_VISION_LE; }
+    public void setEpisodeNearVisionLE(String NEAR_VISION_LE) { this.NEAR_VISION_LE = NEAR_VISION_LE;  }
+
+    public String getEpisodeNearVisionRE() { return NEAR_VISION_RE; }
+    public void setEpisodeNearVisionRE(String NEAR_VISION_RE) { this.NEAR_VISION_RE = NEAR_VISION_RE;  }
+
+    public String getEpisodeDistanceVisionLE() { return DISTANCE_VISION_LE; }
+    public void setEpisodeDistanceVisionLE(String DISTANCE_VISION_LE) { this.DISTANCE_VISION_LE = DISTANCE_VISION_LE;  }
+
+    public String getEpisodeDistanceVisionRE() { return DISTANCE_VISION_RE; }
+    public void setEpisodeDistanceVisionRE(String DISTANCE_VISION_RE) { this.DISTANCE_VISION_RE = DISTANCE_VISION_RE;  }
+
+    public String getEpisodeIPDLE() { return GET_IPD_LEFT; }
+    public void setEpisodeIPDLE(String GET_IPD_LEFT) { this.GET_IPD_LEFT = GET_IPD_LEFT;  }
+
+    public String getEpisodeNvAxisLE() { return GET_NV_AXIS_LEFT; }
+    public void setEpisodeNvAxisLE(String GET_NV_AXIS_LEFT) { this.GET_NV_AXIS_LEFT = GET_NV_AXIS_LEFT;  }
+
+    public String getEpisodeNvCycleLE() { return GET_NV_CYCLE_LEFT; }
+    public void setEpisodeNvCycleLE(String GET_NV_CYCLE_LEFT) { this.GET_NV_CYCLE_LEFT = GET_NV_CYCLE_LEFT;  }
+
+    public String getEpisodeNvSphereLE() { return GET_NV_SPHERE_LEFT; }
+    public void setEpisodeNvSphereLE(String GET_NV_SPHERE_LEFT) { this.GET_NV_SPHERE_LEFT = GET_NV_SPHERE_LEFT;  }
+
+    public String getEpisodeDvAxisLE() { return GET_DV_AXIS_LEFT; }
+    public void setEpisodeDvAxisLE(String GET_DV_AXIS_LEFT) { this.GET_DV_AXIS_LEFT = GET_DV_AXIS_LEFT;  }
+
+    public String getEpisodeDvCycleLE() { return GET_DV_CYCLE_LEFT; }
+    public void setEpisodeDvCycleLE(String GET_DV_CYCLE_LEFT) { this.GET_DV_CYCLE_LEFT = GET_DV_CYCLE_LEFT;  }
+
+    public String getEpisodeDvSphereLE() { return GET_DV_SPHERE_LEFT; }
+    public void setEpisodeDvSphereLE(String GET_DV_SPHERE_LEFT) { this.GET_DV_SPHERE_LEFT = GET_DV_SPHERE_LEFT;  }
+
+    public String getEpisodeIPDRE() { return GET_IPD_RIGHT; }
+    public void setEpisodeIPDRE(String GET_IPD_RIGHT) { this.GET_IPD_RIGHT = GET_IPD_RIGHT;  }
+
+    public String getEpisodeNvAxisRE() { return GET_NV_AXIS_RIGHT; }
+    public void setEpisodeNvAxisRE(String GET_NV_AXIS_RIGHT) { this.GET_NV_AXIS_RIGHT = GET_NV_AXIS_RIGHT;  }
+
+    public String getEpisodeNvCycleRE() { return GET_NV_CYCLE_RIGHT; }
+    public void setEpisodeNvCycleRE(String GET_NV_CYCLE_RIGHT) { this.GET_NV_CYCLE_RIGHT = GET_NV_CYCLE_RIGHT;  }
+
+    public String getEpisodeNvSphereRE() { return GET_NV_SPHERE_RIGHT; }
+    public void setEpisodeNvSphereRE(String GET_NV_SPHERE_RIGHT) { this.GET_NV_SPHERE_RIGHT = GET_NV_SPHERE_RIGHT;  }
+
+    public String getEpisodeDvAxisRE() { return GET_DV_AXIS_RIGHT; }
+    public void setEpisodeDvAxisRE(String GET_DV_AXIS_RIGHT) { this.GET_DV_AXIS_RIGHT = GET_DV_AXIS_RIGHT;  }
+
+    public String getEpisodeDvCycleRE() { return GET_DV_CYCLE_RIGHT; }
+    public void setEpisodeDvCycleRE(String GET_DV_CYCLE_RIGHT) { this.GET_DV_CYCLE_RIGHT = GET_DV_CYCLE_RIGHT;  }
+
+    public String getEpisodeDvSphereRE() { return GET_DV_SPHERE_RIGHT; }
+    public void setEpisodeDvSphereRE(String GET_DV_SPHERE_RIGHT) { this.GET_DV_SPHERE_RIGHT = GET_DV_SPHERE_RIGHT;  }
+
+    public int getEpisodeID() { return episode_id; }
+    public void setEpisodeID(int episode_id) { this.episode_id = episode_id;  }
+
+    public int getEpisodeDoctorID() { return admin_id; }
+    public void setEpisodeDoctorID(int admin_id) { this.admin_id = admin_id;  }
+
+    public int getEpisodePatientID() { return patient_id; }
+    public void setEpisodePatientID(int patient_id) { this.patient_id = patient_id;  }
+
+    public String getEpisodeFollowupDate() { return followup_date; }
+    public void setEpisodeFollowupDate(String followup_date) { this.followup_date = followup_date;  }
+
+    public String getEpisodeDiagnosisDetails() { return diagnosis_details; }
+    public void setEpisodeDiagnosisDetails(String diagnosis_details) { this.diagnosis_details = diagnosis_details;  }
+
+    public String getEpisodeTreatmentDetails() { return treatment_details; }
+    public void setEpisodeTreatmentDetails(String treatment_details) { this.treatment_details = treatment_details;  }
+
+    public String getEpisodeCreatedDate() { return episode_created_date; }
+    public void setEpisodeCreatedDate(String episode_created_date) { this.episode_created_date = episode_created_date;  }
+
+    public String getEpisodeConsultaionFees() { return consultation_fees; }
+    public void setEpisodeConsultaionFees(String consultation_fees) { this.consultation_fees = consultation_fees;  }
+
+    public  List<ChiefMedicalComplaint> getChiefMedicalList() { return PATIENT_CHIEF_MEDCOMPLAINT_ARRAY; }
+    public void setChiefMedicalList( List<ChiefMedicalComplaint> PATIENT_CHIEF_MEDCOMPLAINT_ARRAY) { this.PATIENT_CHIEF_MEDCOMPLAINT_ARRAY = PATIENT_CHIEF_MEDCOMPLAINT_ARRAY;  }
+
+    public  List<Investigations> getInvestigationGeneralList() { return PATIENT_INVESTIGATION_GENERAL_ARRAY; }
+    public void setInvestigationGeneralList( List<Investigations> PATIENT_INVESTIGATION_GENERAL_ARRAY) { this.PATIENT_INVESTIGATION_GENERAL_ARRAY = PATIENT_INVESTIGATION_GENERAL_ARRAY;  }
+
+    public  List<Investigations> getInvestigationOphthalList() { return PATIENT_INVESTIGATION_OPHTHAL_ARRAY; }
+    public void setInvestigationOphthalList( List<Investigations> PATIENT_INVESTIGATION_OPHTHAL_ARRAY) { this.PATIENT_INVESTIGATION_OPHTHAL_ARRAY = PATIENT_INVESTIGATION_OPHTHAL_ARRAY;  }
+
+    public  List<Diagnosis> getDiagnosisList() { return PATIENT_DAIGNOSIS_ARRAY; }
+    public void setDiagnosisList( List<Diagnosis> PATIENT_DAIGNOSIS_ARRAY) { this.PATIENT_DAIGNOSIS_ARRAY = PATIENT_DAIGNOSIS_ARRAY;  }
+
+    public  List<Treatments> getTreatmentList() { return PATIENT_TREATMENT_ARRAY; }
+    public void setTreatmentList( List<Treatments> PATIENT_TREATMENT_ARRAY) { this.PATIENT_TREATMENT_ARRAY = PATIENT_TREATMENT_ARRAY;  }
+
+    public  List<FrequentPrescription> getPrescriptionList() { return PATIENT_PRESCRIPTION_ARRAY; }
+    public void setPrescriptionList( List<FrequentPrescription> PATIENT_PRESCRIPTION_ARRAY) { this.PATIENT_PRESCRIPTION_ARRAY = PATIENT_PRESCRIPTION_ARRAY;  }
+
+    public String getEpisodePrescriptionNotes() { return prescription_note; }
+    public void setEpisodePrescriptionNotes(String prescription_note) { this.prescription_note = prescription_note;  }
+
+    public  List<Examinations> getExaminationList() { return PATIENT_EXAMINATION_ARRAY; }
+    public void setExaminationList( List<Examinations> PATIENT_EXAMINATION_ARRAY) { this.PATIENT_EXAMINATION_ARRAY = PATIENT_EXAMINATION_ARRAY;  }
+
+    public String getEpisodePatientName() { return patientName; }
+    public void setEpisodePatientName(String patientName) { this.patientName = patientName;  }
+
+}

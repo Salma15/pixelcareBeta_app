@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_margin="@dimen/dp_10"
+    android:gravity="center">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/network_warning"/>
+
+        <com.fdc.pixelcare.Views.CustomTextViewBold
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Oh no!"
+            android:gravity="center"
+            android:textSize="@dimen/sp_30"
+            android:textColor="@color/textPrimary"/>
+
+        <com.fdc.pixelcare.Views.CustomTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginTop="@dimen/dp_10"
+            android:text="No Internet found !!!"
+            android:textSize="@dimen/sp_14"
+            android:textColor="@color/textPrimary"/>
+
+        <com.fdc.pixelcare.Views.CustomTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Check your internet connection or try again"
+            android:textSize="@dimen/sp_14"
+            android:textColor="@color/textPrimary"/>
+
+        <com.fdc.pixelcare.Views.CustomTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="OK"
+            android:id="@+id/custom_network_ok"
+            android:layout_marginTop="@dimen/dp_20"
+            android:layout_marginLeft="@dimen/dp_20"
+            android:layout_marginRight="@dimen/dp_20"
+            android:paddingTop="@dimen/dp_10"
+            android:paddingBottom="@dimen/dp_10"
+            android:paddingLeft="@dimen/dp_40"
+            android:paddingRight="@dimen/dp_40"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:background="@drawable/round_edge_primary"/>
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>

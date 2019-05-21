@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".Activities.Opinions.OpinionListActivity"
+    tools:showIn="@layout/activity_opinion_list"
+    android:background="@color/light_grey">
+
+    <com.fdc.pixelcare.Views.CustomTextViewItalicBold
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/opinion_membername"
+        android:text="Welcome to "
+        android:visibility="gone"
+        android:textSize="@dimen/sp_20"
+        android:padding="@dimen/dp_10"
+        android:background="@color/white"
+        android:gravity="right"
+        android:textColor="@color/textPrimary"/>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_margin="@dimen/dp_10">
+
+        <android.support.v7.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/myopinion_list_recyclerview">
+
+        </android.support.v7.widget.RecyclerView>
+
+        <com.fdc.pixelcare.Views.CustomTextViewItalicBold
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/myopinion_list_nodata"
+            android:visibility="gone"
+            android:textSize="@dimen/sp_24"
+            android:gravity="center"
+            android:text="No opinions requested !!!"
+            android:textColor="@color/textPrimary"/>
+
+    </LinearLayout>
+
+</LinearLayout>

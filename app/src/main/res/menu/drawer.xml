@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+
+       <!-- <item
+            android:id="@+id/slide_home"
+            android:title="Home"
+            android:icon="@drawable/slidemenu_home"/>-->
+
+        <item
+            android:id="@+id/slide_location"
+            android:title="Manipal"
+            android:icon="@drawable/slidemenu_location"/>
+
+        <item
+            android:id="@+id/slide_login"
+            android:title="Login"
+            android:icon="@drawable/slidemenu_profile"/>
+
+        <item
+            android:id="@+id/slide_register"
+            android:title="Register"
+            android:icon="@drawable/slidemenu_profile"/>
+
+        <item
+            android:id="@+id/slide_businesslist"
+            android:title="Business List"
+            android:icon="@drawable/slidemenu_location"/>
+
+        <item
+            android:id="@+id/slide_leads"
+            android:title="Leads"
+            android:icon="@drawable/slidemenu_enquiries"/>
+
+        <item
+            android:id="@+id/slide_profile"
+            android:title="My Profile"
+            android:visible="false"
+            android:icon="@drawable/slidemenu_profile"/>
+
+        <item
+            android:id="@+id/slide_profile_vendor"
+            android:title="My Profile"
+            android:icon="@drawable/slidemenu_profile"/>
+
+        <!--<item
+            android:id="@+id/slide_verification"
+            android:title="Verification Details"
+            android:icon="@drawable/slidemenu_verification"/>-->
+
+        <item
+            android:id="@+id/slide_consultations"
+            android:title="My Consultations"
+            android:icon="@drawable/slidemenu_profile"/>
+
+        <item
+            android:id="@+id/slide_enquiries"
+            android:title="My Appointments"
+            android:icon="@drawable/slidemenu_enquiries"/>
+
+        <item
+            android:id="@+id/slide_reviews"
+            android:title="My Opinions"
+            android:icon="@drawable/slidemenu_reviews"/>
+
+        <item
+            android:id="@+id/slide_family_member"
+            android:title="Add Family Member"
+            android:icon="@drawable/slidemenu_about"/>
+
+        <item
+            android:id="@+id/slide_doctors"
+            android:title="View Doctors"
+            android:icon="@drawable/slidemenu_profile"/>
+
+        <item
+            android:id="@+id/slide_blogs"
+            android:title="Blogs"
+            android:icon="@drawable/slidemenu_faq"/>
+
+       <!-- <item
+            android:id="@+id/slide_international"
+            android:title="International Patients"
+            android:icon="@drawable/slidemenu_faq"/>-->
+
+    </group>
+
+    <group
+        android:id="@+id/menu_bottom"
+        android:checkableBehavior="single">
+
+     <!--   <item
+            android:id="@+id/slide_faq"
+            android:title="FAQ"
+            android:icon="@drawable/slidemenu_faq"/>-->
+
+        <item
+            android:id="@+id/slide_contactus"
+            android:title="Contact Us"
+            android:icon="@drawable/slidemenu_contactus"/>
+
+        <item
+            android:id="@+id/slide_about"
+            android:title="About"
+            android:icon="@drawable/slidemenu_location"/>
+
+        <item
+            android:id="@+id/slide_shareapp"
+            android:title="Share App"
+            android:icon="@drawable/slidemenu_contactus"/>
+
+        <item
+            android:id="@+id/slide_privacy_policy"
+            android:title="Privacy Policy"
+            android:icon="@drawable/slidemenu_verification"/>
+
+        <item
+            android:id="@+id/slide_terms"
+            android:title="Terms of Use"
+            android:icon="@drawable/slidemenu_terms"/>
+
+        <item
+            android:id="@+id/slide_signout"
+            android:title="Logout"
+            android:icon="@drawable/slidemenu_logout"/>
+
+    </group>
+</menu>

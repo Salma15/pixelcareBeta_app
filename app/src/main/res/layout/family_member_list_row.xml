@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:gravity="center_vertical"
+    android:background="@color/light_grey"
+    android:layout_marginTop="@dimen/dp_5"
+    android:padding="10dp">
+
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:id="@+id/tvAnimalImage"
+        android:src="@drawable/user_profile"/>
+
+    <com.fdc.pixelcare.Views.CustomTextView
+        android:id="@+id/tvAnimalName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:textColor="@color/textPrimary"
+        android:paddingLeft="@dimen/dp_10"
+        android:textSize="20sp"/>
+
+
+    <ImageView
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:visibility="gone"
+        android:src="@mipmap/next_icon_primary"/>
+
+</LinearLayout>

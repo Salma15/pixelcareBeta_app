@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:background="@color/colorPrimary">
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:visibility="gone"
+            android:src="@mipmap/pixel_splash"/>
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/profile_image"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@mipmap/pixel_splash"
+            app:civ_border_width="0.5dp"
+            android:layout_margin="@dimen/dp_2"
+            android:layout_gravity="center_vertical|center_horizontal"
+            app:civ_border_color="@color/colorPrimaryDark" />
+
+        <com.fdc.pixelcare.Views.CustomTextViewBold
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Pixel Care"
+            android:layout_marginLeft="@dimen/dp_20"
+            android:textSize="@dimen/sp_24"
+            android:textColor="@color/white"/>
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_margin="@dimen/dp_20">
+
+        <com.fdc.pixelcare.Views.CustomTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/verify_otp_name"
+            android:gravity="center"
+            android:textColor="@color/colorPrimaryDark"
+            android:layout_marginTop="@dimen/dp_10"
+            android:textSize="@dimen/sp_20"
+            android:text="Hi "/>
+
+        <com.fdc.pixelcare.Views.CustomTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginTop="@dimen/dp_20"
+            android:textColor="@color/textPrimary"
+            android:textSize="@dimen/sp_14"
+            android:text="Waiting to automatically detect an SMS sent to"/>
+
+        <com.fdc.pixelcare.Views.CustomTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="**********"
+            android:id="@+id/verify_otp_mobile"
+            android:gravity="center"
+            android:textSize="@dimen/sp_14"
+            android:layout_marginTop="@dimen/dp_10"
+            android:textColor="@color/textPrimary"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/dp_10">
+
+            <com.omjoonkim.skeletonloadingview.SkeletonLoadingView
+                android:id="@+id/otpverify_skeletonView"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                app:baseColor="#fbfbfb"
+                app:deepColor="#f2f2f2"
+                app:duration="1500"
+                app:interval="1000"
+                app:progressLength="120dp"
+                app:radius="5dp"
+                android:visibility="visible"
+                android:layout_marginTop="@dimen/dp_10"
+                app:autoStart="true" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:id="@+id/otpverify_loadingdone"
+                android:src="@mipmap/right_mark_green"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_marginTop="@dimen/dp_20">
+
+            <com.fdc.pixelcare.Views.CustomTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/textPrimary"
+                android:textSize="@dimen/sp_12"
+                android:gravity="center"
+                android:text="Enter the OTP below in case we fail to detect the SMS automatically"/>
+
+            <com.fdc.pixelcare.Views.CustomEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/verify_otp_text"
+                android:inputType="text"
+                android:gravity="center"
+                android:text="Enter OTP [Please check SMS/Email]"
+                android:layout_marginTop="15dp"
+                android:textColor="@color/textPrimary"
+                android:textSize="@dimen/sp_14"
+                android:layout_marginLeft="@dimen/dp_20"
+                android:layout_marginRight="@dimen/dp_20"
+                android:background="@drawable/edittext_input_line_transparent"
+                android:longClickable="false"
+                android:clickable="false"
+                android:cursorVisible="false"
+                android:editable="false" />
+
+            <com.fdc.pixelcare.Views.CustomEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_10"
+                android:inputType="number"
+                android:singleLine="true"
+                android:id="@+id/verify_new_otp"
+                android:hint="****"
+                android:gravity="center"
+                android:layout_marginLeft="@dimen/dp_20"
+                android:layout_marginRight="@dimen/dp_20"
+                android:background="@drawable/edittext_input_line_primary"/>
+
+
+            <com.fdc.pixelcare.Views.CustomTextViewSemiBold
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/verify_resend_otp"
+                android:layout_marginTop="15dp"
+                android:text="Resend OTP"
+                android:textSize="@dimen/sp_12"
+                android:layout_gravity="left"
+                android:gravity="center"
+                android:layout_marginLeft="@dimen/dp_20"
+                android:background="@drawable/round_corner_button"
+                android:paddingTop="@dimen/dp_5"
+                android:paddingBottom="@dimen/dp_5"
+                android:paddingLeft="@dimen/dp_10"
+                android:paddingRight="@dimen/dp_10"
+                android:textColor="@color/textPrimary"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/verify_otp_next"
+                android:orientation="horizontal"
+                android:layout_marginTop="@dimen/dp_20"
+                android:paddingLeft="@dimen/dp_10"
+                android:background="@drawable/round_edge_primary"
+                android:gravity="center">
+
+                <com.fdc.pixelcare.Views.CustomTextViewBold
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Continue"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="center"
+                    android:paddingLeft="@dimen/dp_20"
+                    android:paddingRight="@dimen/dp_10"
+                    android:paddingTop="@dimen/dp_5"
+                    android:paddingBottom="@dimen/dp_5"
+                    android:textColor="@color/white"
+                    android:textSize="22sp"/>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/next_icon_white"/>
+
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

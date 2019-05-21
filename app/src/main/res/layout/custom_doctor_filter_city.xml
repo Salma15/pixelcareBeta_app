@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <com.fdc.pixelcare.Views.CustomTextViewSemiBold
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+        android:textColor="@color/black"
+        android:gravity="center"
+        android:id="@+id/doctor_specialization_header"
+        android:minHeight="@dimen/dp_50"
+        android:text="Filter by Cities"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/doctor_specialization_contents"
+        android:orientation="vertical">
+
+        <com.fdc.pixelcare.Views.CustomTextViewSemiBold
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:id="@+id/city_alldoctors"
+            android:background="@drawable/round_edge_primary"
+            android:visibility="visible"
+            android:layout_marginLeft="@dimen/dp_30"
+            android:layout_marginTop="@dimen/dp_10"
+            android:layout_marginRight="@dimen/dp_30"
+            android:layout_marginBottom="@dimen/dp_10"
+            android:minHeight="35dp"
+            android:text="View All Doctors"/>
+
+        <android.support.v7.widget.SearchView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/doctor_city_search_view"
+            android:focusable="false"
+            android:focusableInTouchMode="true"
+            app:iconifiedByDefault="true"/>
+
+        <ListView
+            android:layout_width="match_parent"
+            android:layout_height="340dp"
+            android:id="@+id/city_list"/>
+
+    </LinearLayout>
+
+</LinearLayout>

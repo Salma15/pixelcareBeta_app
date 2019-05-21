@@ -1,0 +1,25 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".Activities.DashboardActivity">
+
+    <item
+        android:id="@+id/item_consult_refresh"
+        android:title="Refresh"
+        android:icon="@mipmap/refresh_white"
+        app:showAsAction="withText|always|collapseActionView" />
+
+    <item
+        android:id="@+id/item_consult_mapview"
+        android:title="Switch Member"
+        android:icon="@mipmap/google_map_white"
+        android:visible="false"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/item_consult_swich_user"
+        android:title="Switch Member"
+        android:icon="@mipmap/switch_white"
+        app:showAsAction="withText|always|collapseActionView" />
+
+</menu>

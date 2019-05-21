@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <com.fdc.pixelcare.Views.CustomTextViewItalicBold
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/home_membername"
+            android:text="Welcome to "
+            android:textSize="@dimen/sp_20"
+            android:padding="@dimen/dp_10"
+            android:background="@color/white"
+            android:gravity="right"
+            android:textColor="@color/textPrimary"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <com.fdc.pixelcare.Views.CustomTextViewSemiBold
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/sp_14"
+                android:gravity="center"
+                android:paddingTop="@dimen/dp_5"
+                android:paddingBottom="@dimen/dp_5"
+                android:background="@color/light_grey"
+                android:textColor="@color/textPrimary"
+                android:text="My Consultations"/>
+
+            <android.support.v7.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/home_consultation_recyclerview"/>
+
+            <com.fdc.pixelcare.Views.CustomTextViewItalicBold
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/home_consultation_empty"
+                android:visibility="gone"
+                android:gravity="center"
+                android:textSize="@dimen/sp_24"
+                android:textColor="@color/textPrimary"
+                android:layout_marginLeft="@dimen/dp_10"
+                android:layout_marginRight="@dimen/dp_10"
+                android:text="No consultations scheduled yet !!!"/>
+
+        </LinearLayout>
+
+       <!-- <include
+            android:id="@+id/footer"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            layout="@layout/footer"
+            android:outlineProvider="bounds"/>-->
+
+
+    </LinearLayout>
+
+</LinearLayout>

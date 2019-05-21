@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/track_item_row"
+    android:orientation="horizontal"
+    android:background="@color/light_grey"
+    android:layout_marginTop="@dimen/dp_10"
+    android:gravity="center"
+    android:paddingLeft="@dimen/dp_10"
+    android:paddingRight="@dimen/dp_10"
+    android:paddingTop="@dimen/dp_5"
+    android:paddingBottom="@dimen/dp_5">
+
+    <com.fdc.pixelcare.Views.CustomTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/track_episode_num"
+        android:text="Visit 1: "
+        android:textColor="@color/textPrimary"
+        android:singleLine="true"
+        android:textSize="@dimen/sp_14"/>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:layout_marginLeft="@dimen/dp_10"
+        android:layout_marginRight="@dimen/dp_10"
+        android:layout_marginTop="@dimen/dp_2"
+        android:layout_marginBottom="@dimen/dp_2">
+
+        <com.fdc.pixelcare.Views.CustomTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:id="@+id/track_referredby_name"
+            android:textColor="@color/textPrimary"
+            android:textSize="@dimen/sp_14"/>
+
+        <com.fdc.pixelcare.Views.CustomTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/track_patient_name"
+            android:text=""
+            android:layout_marginTop="@dimen/dp_2"
+            android:textColor="@color/textPrimary"
+            android:singleLine="true"
+            android:textSize="@dimen/sp_12"/>
+
+        <com.fdc.pixelcare.Views.CustomTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/track_referred_date"
+            android:text=""
+            android:layout_marginTop="@dimen/dp_2"
+            android:textColor="@color/textSecondary"
+            android:singleLine="true"
+            android:textSize="@dimen/sp_12"/>
+
+        <com.fdc.pixelcare.Views.CustomTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/track_followup_date"
+            android:text=""
+            android:layout_marginTop="@dimen/dp_2"
+            android:textColor="@color/textSecondary"
+            android:singleLine="true"
+            android:textSize="@dimen/sp_12"/>
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:src="@mipmap/next_icon_primary"/>
+
+</LinearLayout>

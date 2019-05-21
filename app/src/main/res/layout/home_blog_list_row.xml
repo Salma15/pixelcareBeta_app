@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/dp_5"
+    android:layout_marginBottom="@dimen/dp_5"
+    android:id="@+id/home_list_layout"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#F5F5F5"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.30"
+            android:padding="@dimen/dp_10"
+            android:orientation="vertical">
+            <ImageView
+                android:id="@+id/feeds_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:visibility="visible"
+                android:layout_gravity="center"
+                app:srcCompat="@drawable/blogs_empty_img" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.70"
+            android:paddingLeft="4dp"
+            android:padding="@dimen/dp_10"
+            android:orientation="vertical">
+
+            <com.fdc.pixelcare.Views.CustomTextViewBold
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/feeds_title"
+                android:text="Blog Title"
+                android:textSize="@dimen/sp_12"
+                android:maxLines="1"
+                android:textColor="@color/textPrimary"/>
+
+            <com.fdc.pixelcare.Views.CustomTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="@dimen/dp_2"
+                android:id="@+id/feeds_date"
+                android:text="Posted on: 12-01-2018"
+                android:textColor="@color/textSecondary"
+                android:textSize="@dimen/sp_10"/>
+
+            <com.fdc.pixelcare.Views.CustomTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/feeds_description"
+                android:paddingTop="@dimen/dp_2"
+                android:text="Descriptions"
+                android:maxLines="2"
+                android:singleLine="false"
+                android:textSize="@dimen/sp_12"
+                android:textColor="@color/textSecondary"/>
+
+            <com.fdc.pixelcare.Views.CustomTextViewItalicBold
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/feeds_readmore"
+                android:text="Read More >> "
+                android:textSize="@dimen/sp_10"
+                android:layout_gravity="right"
+                android:textColor="@color/colorPrimary"/>
+
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

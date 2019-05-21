@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/hosp_map_list_cardview"
+        android:layout_marginLeft="@dimen/dp_10"
+        android:layout_marginTop="@dimen/dp_10"
+        android:layout_marginRight="@dimen/dp_10"
+        android:layout_marginBottom="@dimen/dp_2"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="4dp"
+        app:cardMaxElevation="6dp"
+        app:contentPadding="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:paddingLeft="@dimen/dp_10"
+                android:paddingTop="@dimen/dp_10"
+                android:paddingRight="@dimen/dp_10">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:id="@+id/hosp_map_list_image"
+                    android:src="@mipmap/hospital_icon"/>
+
+                <LinearLayout
+                    android:id="@+id/name_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center_vertical"
+                    android:layout_toRightOf="@+id/hosp_map_list_image"
+                    android:layout_alignParentTop="true">
+
+                    <com.fdc.pixelcare.Views.CustomTextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textSize="@dimen/sp_14"
+                        android:textColor="@color/textPrimary"
+                        android:id="@+id/hosp_map_list_name"
+                        android:layout_gravity="center_vertical"
+                        android:gravity="center_vertical"
+                        android:text="Hospital Name" />
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:id="@+id/home_map_list_star"
+                        android:src="@mipmap/star_gold"/>
+
+                </LinearLayout>
+
+                <com.fdc.pixelcare.Views.CustomTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/sp_12"
+                    android:textColor="@color/textPrimary"
+                    android:id="@+id/hosp_map_list_address"
+                    android:layout_marginTop="@dimen/dp_5"
+                    android:text="Address"
+                    android:layout_toRightOf="@+id/hosp_map_list_image"
+                    android:layout_below="@+id/name_layout"
+                    android:layout_alignLeft="@+id/name_layout"/>
+
+                <com.fdc.pixelcare.Views.CustomTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/sp_12"
+                    android:textColor="@color/textPrimary"
+                    android:id="@+id/hosp_map_list_state"
+                    android:layout_marginTop="@dimen/dp_5"
+                    android:text="State"
+                    android:layout_toRightOf="@+id/hosp_map_list_image"
+                    android:layout_below="@+id/hosp_map_list_address"
+                    android:layout_alignLeft="@+id/hosp_map_list_address"/>
+
+                <com.fdc.pixelcare.Views.CustomTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/sp_12"
+                    android:textColor="@color/textPrimary"
+                    android:id="@+id/hosp_map_list_country"
+                    android:layout_marginTop="@dimen/dp_5"
+                    android:text="Country"
+                    android:layout_toRightOf="@+id/hosp_map_list_image"
+                    android:layout_below="@+id/hosp_map_list_state"
+                    android:layout_alignLeft="@+id/hosp_map_list_state"/>
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+
+    </android.support.v7.widget.CardView>
+
+
+</LinearLayout>

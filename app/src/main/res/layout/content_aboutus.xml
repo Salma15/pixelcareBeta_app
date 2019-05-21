@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".Activities.Others.AboutUsActivity"
+    tools:showIn="@layout/activity_aboutus">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_weight="1"
+        android:layout_margin="@dimen/dp_20">
+
+        <ImageView
+            android:layout_width="@dimen/dp_80"
+            android:layout_height="@dimen/dp_80"
+            android:src="@mipmap/pixel_splash"
+            android:adjustViewBounds="true"
+            android:layout_gravity="center"/>
+
+        <com.fdc.pixelcare.Views.CustomTextViewBold
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="PIXEL CARE"
+            android:textColor="@color/colorPrimary"
+            android:layout_marginTop="@dimen/dp_20"
+            android:gravity="center"
+            android:textSize="@dimen/sp_18"/>
+
+        <com.fdc.pixelcare.Views.CustomTextViewSemiBold
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/aboutus_versionname"
+            android:text="Version 1.0"
+            android:textColor="@color/textPrimary"
+            android:layout_marginTop="@dimen/dp_5"
+            android:gravity="center"
+            android:textSize="@dimen/sp_16"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/dp_30"
+            android:padding="@dimen/dp_10"
+            android:background="@color/white">
+
+            <ImageView
+                android:layout_width="@dimen/dp_30"
+                android:layout_height="@dimen/dp_30"
+                android:layout_gravity="center_vertical"
+                android:src="@mipmap/aboutus_web"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:id="@+id/aboutus_website">
+
+                <com.fdc.pixelcare.Views.CustomTextViewSemiBold
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="Website"
+                    android:textColor="@color/colorPrimary"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="@dimen/dp_10"
+                    android:textSize="@dimen/sp_16"/>
+
+                <com.fdc.pixelcare.Views.CustomTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="https://www.pixeleyecare.com/"
+                    android:textColor="@color/textPrimary"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="@dimen/dp_10"
+                    android:textSize="@dimen/sp_14"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="@dimen/dp_10"
+            android:layout_marginTop="@dimen/dp_10"
+            android:id="@+id/aboutus_email"
+            android:background="@color/white">
+
+            <ImageView
+                android:layout_width="@dimen/dp_30"
+                android:layout_height="@dimen/dp_30"
+                android:layout_gravity="center_vertical"
+                android:src="@mipmap/aboutus_mail"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <com.fdc.pixelcare.Views.CustomTextViewSemiBold
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="Feedback via email"
+                    android:textColor="@color/colorPrimary"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="@dimen/dp_10"
+                    android:textSize="@dimen/sp_16" />
+
+                <com.fdc.pixelcare.Views.CustomTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="medisensebd@medisense.me"
+                    android:textColor="@color/textPrimary"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="@dimen/dp_10"
+                    android:textSize="@dimen/sp_14" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <com.fdc.pixelcare.Views.CustomTextViewSemiBold
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="© 2018 FDC Pixel Eye Care. All Rights Reserved."
+        android:layout_alignParentBottom="true"
+        android:textColor="@color/colorPrimary"
+        android:textSize="@dimen/sp_12"
+        android:layout_gravity="center"
+        android:layout_marginLeft="@dimen/dp_20"
+        android:layout_marginRight="@dimen/dp_20"
+        android:gravity="center"/>
+
+</LinearLayout>

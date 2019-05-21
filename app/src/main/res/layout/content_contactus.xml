@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".Activities.Others.ContactUsActivity"
+    tools:showIn="@layout/activity_contactus">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_margin="@dimen/dp_20">
+
+                <com.fdc.pixelcare.Views.CustomTextViewBold
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Need Any Help !!!"
+                    android:textColor="@color/colorPrimary"
+                    android:layout_marginTop="@dimen/dp_20"
+                    android:gravity="center"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"/>
+
+                <ImageView
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:src="@drawable/help_image1"
+                    android:layout_marginTop="@dimen/dp_20"
+                    android:layout_gravity="center"
+                    android:adjustViewBounds="true"/>
+
+                <com.fdc.pixelcare.Views.CustomTextViewSemiBold
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Hello there! Need help ? reach out to us right here, and we'll get back you as soon as we can!"
+                    android:textColor="@color/textSecondary"
+                    android:layout_marginTop="@dimen/dp_20"
+                    android:gravity="center"
+                    android:textSize="@dimen/sp_16" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/spinner_bg"
+                    android:orientation="vertical"
+                    android:layout_marginTop="@dimen/dp_20"
+                    android:paddingTop="@dimen/dp_10"
+                    android:paddingBottom="@dimen/dp_10">
+
+                    <com.fdc.pixelcare.Views.CustomEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:hint="Write your query here..."
+                        android:id="@+id/contactus_text"
+                        android:singleLine="false"
+                        android:textCursorDrawable="@null"
+                        android:background="@android:color/transparent"
+                        android:paddingLeft="12dp"
+                        android:paddingRight="12dp"
+                        android:paddingTop="6dp"
+                        android:paddingBottom="12dp"
+                        android:textSize="@dimen/sp_14"
+                        android:textColorHint="@color/textPrimary"
+                        android:textColor="@color/black"/>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1px"
+                    android:background="@color/colorAccent"
+                    android:paddingLeft="12dp"
+                    android:paddingRight="12dp"
+                    android:visibility="gone"
+                    android:padding="12dp" />
+
+                <Button
+                    android:id="@+id/contactus_submit"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:text="Request Help"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:layout_marginTop="@dimen/dp_30"
+                    android:layout_marginBottom="12dp"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                    android:background="@color/colorPrimary" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+    
+</LinearLayout>

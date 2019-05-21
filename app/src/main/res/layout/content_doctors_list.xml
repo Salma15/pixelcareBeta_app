@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".Activities.Appointments.DoctorsListActivity"
+    tools:showIn="@layout/activity_doctots_list" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/light_grey"
+        android:padding="@dimen/dp_10">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:id="@+id/doclist_direct_appointment">
+
+            <com.fdc.pixelcare.Views.CustomTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/sp_12"
+                android:textColor="#ff330000"
+                android:gravity="right"
+                android:text="No doctor records found !!!"/>
+
+        </LinearLayout>
+
+        <com.fdc.pixelcare.Views.CustomTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_2"
+            android:text="Showing doctors from "/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/dp_5">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:id="@+id/doclist_spec_filter">
+
+                <com.fdc.pixelcare.Views.CustomTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/sp_14"
+                    android:textColor="@color/textPrimary"
+                    android:text="All Specialization"/>
+
+                <ImageView
+                    android:layout_width="12dp"
+                    android:layout_height="12dp"
+                    android:layout_marginLeft="@dimen/dp_5"
+                    android:src="@mipmap/edit_icon"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:id="@+id/doclist_city_filter"
+                android:orientation="horizontal">
+
+                <com.fdc.pixelcare.Views.CustomTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/sp_14"
+                    android:textColor="@color/textPrimary"
+                    android:text="All Cities"/>
+
+                <ImageView
+                    android:layout_width="12dp"
+                    android:layout_height="12dp"
+                    android:src="@mipmap/my_location_icon"
+                    android:layout_marginLeft="@dimen/dp_5"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_margin="@dimen/dp_10">
+
+            <ListView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:id="@+id/doclist_listview"
+                android:scrollbars="none"
+                android:divider="@android:color/transparent"
+                android:dividerHeight="1dp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="64dp"
+                android:id="@+id/doclist_progressbar">
+
+                <com.omjoonkim.skeletonloadingview.SkeletonLoadingView
+                    android:layout_width="42dp"
+                    android:layout_height="42dp"
+                    android:id="@+id/skeletonView1"
+                    android:layout_marginLeft="16dp"
+                    android:layout_centerVertical="true"
+                    app:baseColor="#fffbfbfb"
+                    app:deepColor="#fff2f2f2"
+                    app:duration="1500"
+                    app:interval="1000"
+                    app:progressLength="120dp"
+                    app:radius="42dp"/>
+
+                <com.omjoonkim.skeletonloadingview.SkeletonLoadingView
+                    android:layout_width="210dp"
+                    android:layout_height="8dp"
+                    android:id="@+id/skeletonView2"
+                    android:layout_marginLeft="70dp"
+                    android:layout_marginTop="18dp"
+                    app:baseColor="#fffbfbfb"
+                    app:deepColor="#fff2f2f2"
+                    app:duration="1500"
+                    app:interval="1000"
+                    app:progressLength="120dp"
+                    app:radius="5dp"/>
+
+                <com.omjoonkim.skeletonloadingview.SkeletonLoadingView
+                    android:layout_width="100dp"
+                    android:layout_height="12dp"
+                    android:id="@+id/skeletonView3"
+                    android:layout_marginLeft="70dp"
+                    android:layout_marginTop="34dp"
+                    app:baseColor="#fffbfbfb"
+                    app:deepColor="#fff2f2f2"
+                    app:duration="1500"
+                    app:interval="1000"
+                    app:progressLength="120dp"
+                    app:radius="5dp"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#fff2f2f2"
+                    android:layout_alignParentBottom="true" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</LinearLayout>

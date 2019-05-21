@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:layout_margin="@dimen/dp_20">
+
+    <com.fdc.pixelcare.Views.CustomTextViewSemiBold
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Filter by locality/ specialty"
+        android:background="@color/colorPrimaryDark"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:paddingTop="@dimen/dp_5"
+        android:paddingBottom="@dimen/dp_5"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/hosp_map_filter_gps"
+        android:layout_marginTop="@dimen/dp_20"
+        android:background="@color/backgroundGray"
+        android:padding="@dimen/dp_5"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@mipmap/my_location_icon"/>
+
+        <com.fdc.pixelcare.Views.CustomTextViewSemiBold
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Use my current location"
+            android:textSize="@dimen/sp_14"
+            android:paddingLeft="@dimen/dp_10"
+            android:textColor="@color/textPrimary"/>
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@mipmap/click_here_icon"/>
+
+    </LinearLayout>
+
+    <com.fdc.pixelcare.Views.CustomTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/hosp_map_filter_gps_loc"
+        android:textSize="@dimen/sp_14"
+        android:text=""
+        android:paddingLeft="@dimen/dp_40"
+        android:layout_marginTop="@dimen/dp_5"
+        android:textColor="@color/textPrimary"/>
+
+    <com.fdc.pixelcare.Views.CustomTextViewBold
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=" ( OR )"
+        android:layout_marginTop="@dimen/dp_10"
+        android:textColor="@color/textPrimary"
+        android:textSize="@dimen/sp_12"
+        android:layout_gravity="center"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/hosp_map_filter_city"
+        android:layout_marginTop="@dimen/dp_10"
+        android:background="@color/backgroundGray"
+        android:padding="@dimen/dp_5"
+        android:orientation="horizontal"
+        android:layout_marginBottom="@dimen/dp_2"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@mipmap/city_icon"/>
+
+        <com.fdc.pixelcare.Views.CustomTextViewSemiBold
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Search for locality"
+            android:textSize="@dimen/sp_14"
+            android:paddingLeft="@dimen/dp_10"
+            android:textColor="@color/textPrimary"/>
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@mipmap/drop_down1"/>
+
+    </LinearLayout>
+
+    <com.fdc.pixelcare.Views.CustomTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/hosp_map_filter_names"
+        android:textSize="@dimen/sp_14"
+        android:text=""
+        android:paddingLeft="@dimen/dp_40"
+        android:layout_marginTop="@dimen/dp_5"
+        android:textColor="@color/textPrimary"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/hosp_map_filter_specialty"
+        android:layout_marginTop="@dimen/dp_20"
+        android:background="@color/backgroundGray"
+        android:padding="@dimen/dp_5"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@mipmap/specialization_icon"/>
+
+        <com.fdc.pixelcare.Views.CustomTextViewSemiBold
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Search for specialty"
+            android:textSize="@dimen/sp_14"
+            android:paddingLeft="@dimen/dp_10"
+            android:textColor="@color/textPrimary"/>
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@mipmap/drop_down1"/>
+    </LinearLayout>
+
+    <com.fdc.pixelcare.Views.CustomTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/hosp_map_filter_specialtynames"
+        android:textSize="@dimen/sp_14"
+        android:text=""
+        android:paddingLeft="@dimen/dp_40"
+        android:layout_marginTop="@dimen/dp_5"
+        android:textColor="@color/textPrimary"/>
+
+
+    <com.fdc.pixelcare.Views.CustomTextViewBold
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/hosp_map_filter_submit"
+        android:text="SUBMIT"
+        android:gravity="center"
+        android:layout_margin="@dimen/dp_20"
+        android:layout_gravity="center"
+        android:textSize="@dimen/sp_14"
+        android:paddingLeft="@dimen/dp_50"
+        android:paddingRight="@dimen/dp_50"
+        android:paddingTop="@dimen/dp_10"
+        android:paddingBottom="@dimen/dp_10"
+        android:background="@drawable/round_edge_primary"
+        android:textColor="@color/white"/>
+
+
+</LinearLayout>

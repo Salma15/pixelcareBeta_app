@@ -1,0 +1,793 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".Activities.Appointments.BookAppointmentActivity"
+    tools:showIn="@layout/activity_book_appointment" >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:background="@color/light_grey">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:background="@color/white"
+                android:padding="@dimen/dp_10">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:id="@+id/book_appt_docimage"
+                    android:src="@drawable/ic_no_user"/>
+
+                <com.fdc.pixelcare.Views.CustomTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/sp_14"
+                    android:textColor="@color/textPrimary"
+                    android:id="@+id/book_appt_docname"
+                    android:layout_marginLeft="@dimen/dp_10"
+                    android:text="Doctor Name"
+                    android:layout_toRightOf="@+id/book_appt_docimage"
+                    android:layout_alignParentTop="true"/>
+
+                <com.fdc.pixelcare.Views.CustomTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/sp_12"
+                    android:textColor="@color/textPrimary"
+                    android:id="@+id/book_appt_docspec"
+                    android:layout_marginTop="@dimen/dp_2"
+                    android:text="Specialization"
+                    android:layout_below="@+id/book_appt_docname"
+                    android:layout_alignLeft="@+id/book_appt_docname"/>
+
+                <com.fdc.pixelcare.Views.CustomTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/sp_12"
+                    android:textColor="@color/textSecondary"
+                    android:id="@+id/book_appt_doccity"
+                    android:layout_marginTop="@dimen/dp_2"
+                    android:text="City"
+                    android:layout_below="@+id/book_appt_docspec"
+                    android:layout_alignLeft="@+id/book_appt_docspec"/>
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:id="@+id/appintment_book_datetime_layout">
+
+                <com.fdc.pixelcare.Views.CustomTextViewBold
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/sp_14"
+                    android:textColor="@color/textPrimary"
+                    android:gravity="center"
+                    android:padding="@dimen/dp_5"
+                    android:text="Choose Hospital "/>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="left|center_vertical"
+                    android:layout_margin="@dimen/dp_10"
+                    android:paddingBottom="@dimen/dp_5"
+                    android:background="@drawable/spinner_bg"
+                    android:orientation="horizontal">
+
+                    <Spinner
+                        android:id="@+id/appintment_book_hospital_spinner"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="center"
+                        android:background="@android:color/transparent"
+                        android:gravity="center"
+                        android:spinnerMode="dropdown" />
+
+                    <ImageView
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="center"
+                        android:src="@mipmap/drop" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/gray"
+                    android:layout_marginTop="@dimen/dp_5"/>
+
+                <com.fdc.pixelcare.Views.CustomTextViewBold
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/sp_14"
+                    android:textColor="@color/textPrimary"
+                    android:gravity="center"
+                    android:padding="@dimen/dp_5"
+                    android:text="Choose Appointment Date"/>
+
+                <devs.mulham.horizontalcalendar.HorizontalCalendarView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/calendarView"
+                    app:sizeBottomText="@dimen/sp_14"
+                    app:sizeMiddleText="@dimen/sp_20"
+                    android:visibility="gone"
+                    app:textColorSelected="@color/textPrimary"/>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="left|center_vertical"
+                    android:layout_margin="@dimen/dp_10"
+                    android:paddingBottom="@dimen/dp_5"
+                    android:background="@drawable/spinner_bg"
+                    android:orientation="horizontal">
+
+                    <Spinner
+                        android:id="@+id/appintment_book_dates_spinner"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="center"
+                        android:background="@android:color/transparent"
+                        android:gravity="center"
+                        android:spinnerMode="dropdown" />
+
+                    <ImageView
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="center"
+                        android:src="@mipmap/drop" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/gray"
+                    android:layout_marginTop="@dimen/dp_5"/>
+
+                <com.fdc.pixelcare.Views.CustomTextViewBold
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/sp_14"
+                    android:textColor="@color/textPrimary"
+                    android:gravity="center"
+                    android:padding="@dimen/dp_5"
+                    android:text="Choose Appointment Time"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingLeft="@dimen/dp_5"
+                    android:paddingRight="@dimen/dp_5"
+                    android:layout_marginTop="@dimen/dp_10">
+
+                    <com.fdc.pixelcare.Views.CustomTextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textColor="@color/textPrimary"
+                        android:gravity="center"
+                        android:id="@+id/book_aapt_8am"
+                        android:background="@color/white"
+                        android:padding="@dimen/dp_5"
+                        android:layout_marginRight="@dimen/dp_5"
+                        android:text="8:00 AM" />
+
+                    <com.fdc.pixelcare.Views.CustomTextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textColor="@color/textPrimary"
+                        android:gravity="center"
+                        android:id="@+id/book_aapt_9am"
+                        android:background="@color/white"
+                        android:padding="@dimen/dp_5"
+                        android:layout_marginRight="@dimen/dp_5"
+                        android:text="9:00 AM" />
+
+                    <com.fdc.pixelcare.Views.CustomTextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textColor="@color/textPrimary"
+                        android:gravity="center"
+                        android:id="@+id/book_aapt_10am"
+                        android:background="@color/white"
+                        android:padding="@dimen/dp_5"
+                        android:layout_marginRight="@dimen/dp_5"
+                        android:text="10:00 AM" />
+
+                    <com.fdc.pixelcare.Views.CustomTextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textColor="@color/textPrimary"
+                        android:gravity="center"
+                        android:id="@+id/book_aapt_11am"
+                        android:background="@color/white"
+                        android:padding="@dimen/dp_5"
+                        android:layout_marginRight="@dimen/dp_5"
+                        android:text="11:00 AM" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingLeft="@dimen/dp_5"
+                    android:paddingRight="@dimen/dp_5"
+                    android:layout_marginTop="@dimen/dp_10">
+
+                    <com.fdc.pixelcare.Views.CustomTextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textColor="@color/textPrimary"
+                        android:gravity="center"
+                        android:id="@+id/book_aapt_12pm"
+                        android:background="@color/white"
+                        android:padding="@dimen/dp_5"
+                        android:layout_marginRight="@dimen/dp_5"
+                        android:text="12:00 PM" />
+
+                    <com.fdc.pixelcare.Views.CustomTextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textColor="@color/textPrimary"
+                        android:gravity="center"
+                        android:id="@+id/book_aapt_1pm"
+                        android:background="@color/white"
+                        android:padding="@dimen/dp_5"
+                        android:layout_marginRight="@dimen/dp_5"
+                        android:text="01:00 PM" />
+
+                    <com.fdc.pixelcare.Views.CustomTextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textColor="@color/textPrimary"
+                        android:gravity="center"
+                        android:id="@+id/book_aapt_2pm"
+                        android:background="@color/white"
+                        android:padding="@dimen/dp_5"
+                        android:layout_marginRight="@dimen/dp_5"
+                        android:text="02:00 PM" />
+
+                    <com.fdc.pixelcare.Views.CustomTextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textColor="@color/textPrimary"
+                        android:gravity="center"
+                        android:id="@+id/book_aapt_3pm"
+                        android:background="@color/white"
+                        android:padding="@dimen/dp_5"
+                        android:layout_marginRight="@dimen/dp_5"
+                        android:text="03:00 PM" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingLeft="@dimen/dp_5"
+                    android:paddingRight="@dimen/dp_5"
+                    android:layout_marginTop="@dimen/dp_10">
+
+                    <com.fdc.pixelcare.Views.CustomTextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textColor="@color/textPrimary"
+                        android:gravity="center"
+                        android:id="@+id/book_aapt_4pm"
+                        android:background="@color/white"
+                        android:padding="@dimen/dp_5"
+                        android:layout_marginRight="@dimen/dp_5"
+                        android:text="04:00 PM" />
+
+                    <com.fdc.pixelcare.Views.CustomTextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textColor="@color/textPrimary"
+                        android:gravity="center"
+                        android:id="@+id/book_aapt_5pm"
+                        android:background="@color/white"
+                        android:padding="@dimen/dp_5"
+                        android:layout_marginRight="@dimen/dp_5"
+                        android:text="05:00 PM" />
+
+                    <com.fdc.pixelcare.Views.CustomTextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textColor="@color/textPrimary"
+                        android:gravity="center"
+                        android:id="@+id/book_aapt_6pm"
+                        android:background="@color/white"
+                        android:padding="@dimen/dp_5"
+                        android:layout_marginRight="@dimen/dp_5"
+                        android:text="06:00 PM" />
+
+                    <com.fdc.pixelcare.Views.CustomTextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textColor="@color/textPrimary"
+                        android:gravity="center"
+                        android:id="@+id/book_aapt_7pm"
+                        android:background="@color/white"
+                        android:padding="@dimen/dp_5"
+                        android:layout_marginRight="@dimen/dp_5"
+                        android:text="07:00 PM" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingLeft="@dimen/dp_5"
+                    android:paddingRight="@dimen/dp_5"
+                    android:layout_marginTop="@dimen/dp_10">
+
+                    <com.fdc.pixelcare.Views.CustomTextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textColor="@color/textPrimary"
+                        android:gravity="center"
+                        android:id="@+id/book_aapt_8pm"
+                        android:background="@color/white"
+                        android:padding="@dimen/dp_5"
+                        android:layout_marginRight="@dimen/dp_5"
+                        android:text="08:00 PM" />
+
+                    <com.fdc.pixelcare.Views.CustomTextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textColor="@color/textPrimary"
+                        android:gravity="center"
+                        android:visibility="invisible"
+                        android:background="@color/white"
+                        android:padding="@dimen/dp_5"
+                        android:layout_marginRight="@dimen/dp_5"
+                        android:text="09:00 PM" />
+
+                    <com.fdc.pixelcare.Views.CustomTextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textColor="@color/textPrimary"
+                        android:gravity="center"
+                        android:visibility="invisible"
+                        android:background="@color/white"
+                        android:padding="@dimen/dp_5"
+                        android:layout_marginRight="@dimen/dp_5"
+                        android:text="10:00 PM" />
+
+                    <com.fdc.pixelcare.Views.CustomTextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textColor="@color/textPrimary"
+                        android:gravity="center"
+                        android:visibility="invisible"
+                        android:background="@color/white"
+                        android:padding="@dimen/dp_5"
+                        android:layout_marginRight="@dimen/dp_5"
+                        android:text="11:00 PM" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingLeft="@dimen/dp_5"
+                    android:paddingRight="@dimen/dp_5"
+                    android:background="@drawable/view_line_dotted"
+                    android:paddingTop="@dimen/dp_5"
+                    android:paddingBottom="@dimen/dp_5"
+                    android:layout_marginTop="@dimen/dp_10">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:layout_gravity="center"
+                        android:orientation="horizontal">
+
+                        <com.fdc.pixelcare.Views.CustomTextView
+                            android:layout_width="50dp"
+                            android:layout_height="20dp"
+                            android:textColor="@color/textPrimary"
+                            android:gravity="center"
+                            android:background="@color/white"
+                            android:padding="@dimen/dp_5"
+                            android:layout_marginRight="@dimen/dp_5"
+                            android:text="" />
+
+                        <com.fdc.pixelcare.Views.CustomTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Available Slots"
+                            android:textColor="@color/textPrimary"
+                            android:textSize="@dimen/sp_14"/>
+
+                        <com.fdc.pixelcare.Views.CustomTextView
+                            android:layout_width="50dp"
+                            android:layout_height="20dp"
+                            android:textColor="@color/textPrimary"
+                            android:gravity="center"
+                            android:background="@color/gray1"
+                            android:padding="@dimen/dp_5"
+                            android:layout_marginLeft="@dimen/dp_20"
+                            android:layout_marginRight="@dimen/dp_5"
+                            android:text="" />
+
+                        <com.fdc.pixelcare.Views.CustomTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Unavailable Slots"
+                            android:textColor="@color/textPrimary"
+                            android:textSize="@dimen/sp_14"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:id="@+id/appintment_book_userinfo_layout"
+                android:visibility="gone">
+
+                <com.fdc.pixelcare.Views.CustomTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@android:color/holo_red_dark"
+                    android:gravity="right"
+                    android:id="@+id/appintment_book_changedate"
+                    android:padding="@dimen/dp_5"
+                    android:text="Change Date &amp; Time"/>
+
+                <com.fdc.pixelcare.Views.CustomTextViewBold
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/sp_14"
+                    android:textColor="@color/textPrimary"
+                    android:gravity="center"
+                    android:padding="@dimen/dp_5"
+                    android:text="Appointment scheduled date &amp; time"/>
+
+                <com.fdc.pixelcare.Views.CustomTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/sp_16"
+                    android:textColor="@color/textPrimary"
+                    android:gravity="center"
+                    android:id="@+id/appintment_book_date"
+                    android:padding="@dimen/dp_5"
+                    android:text="dd/mm/yyyy"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/colorPrimary"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:background="@color/white">
+
+                    <com.fdc.pixelcare.Views.CustomTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/sp_14"
+                        android:textColor="@color/textPrimary"
+                        android:layout_marginLeft="@dimen/dp_10"
+                        android:clickable="true"
+                        android:layout_marginTop="@dimen/dp_10"
+                        android:layout_marginRight="@dimen/dp_10"
+                        android:layout_marginBottom="@dimen/dp_10"
+                        android:text="Patient Name"
+                        android:editable="false"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginLeft="@dimen/dp_10"
+                        android:layout_marginRight="@dimen/dp_10">
+
+                        <RelativeLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:layout_marginRight="3dp"
+                            android:orientation="horizontal"
+                            android:background="@drawable/spinner_bg">
+
+                            <Spinner
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:layout_gravity="center"
+                                android:id="@+id/appint_book_member_spinner"
+                                android:background="@android:color/transparent"
+                                android:layout_centerVertical="true"
+                                android:spinnerMode="dropdown"/>
+
+                            <ImageView
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:layout_gravity="center"
+                                android:src="@mipmap/drop"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"/>
+                        </RelativeLayout>
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:id="@+id/appint_book_add_member"
+                            android:paddingLeft="@dimen/dp_10"
+                            android:src="@mipmap/add_user_icon"/>
+                    </LinearLayout>
+
+                    <com.fdc.pixelcare.Views.CustomEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/sp_14"
+                        android:id="@+id/appint_book_mobile"
+                        android:background="@drawable/edittext_input_line_primary"
+                        android:layout_marginLeft="@dimen/dp_10"
+                        android:layout_marginTop="@dimen/dp_10"
+                        android:layout_marginRight="@dimen/dp_10"
+                        android:hint="Mobile No."
+                        android:maxLength="10"
+                        android:inputType="phone|textNoSuggestions"/>
+
+                    <com.fdc.pixelcare.Views.CustomEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/sp_14"
+                        android:id="@+id/appint_book_email"
+                        android:background="@drawable/edittext_input_line_primary"
+                        android:layout_marginLeft="@dimen/dp_10"
+                        android:layout_marginTop="@dimen/dp_10"
+                        android:layout_marginRight="@dimen/dp_10"
+                        android:hint="Email"
+                        android:inputType="textEmailAddress|textNoSuggestions"/>
+
+                    <com.fdc.pixelcare.Views.CustomEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/sp_14"
+                        android:id="@+id/appint_book_age"
+                        android:background="@drawable/edittext_input_line_primary"
+                        android:layout_marginLeft="@dimen/dp_10"
+                        android:layout_marginTop="@dimen/dp_10"
+                        android:layout_marginRight="@dimen/dp_10"
+                        android:hint="Age"
+                        android:maxLength="10"
+                        android:inputType="textNoSuggestions"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:orientation="horizontal"
+                        android:background="@drawable/edittext_input_line_primary"
+                        android:layout_marginLeft="@dimen/dp_10"
+                        android:layout_marginTop="@dimen/dp_10"
+                        android:layout_marginRight="@dimen/dp_10">
+
+                        <com.fdc.pixelcare.Views.CustomTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/textPrimary"
+                            android:gravity="center_vertical"
+                            android:clickable="true"
+                            android:text="Gender"
+                            android:editable="false"/>
+
+                        <RadioGroup
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:orientation="horizontal"
+                            android:id="@+id/appint_book_radioGroupGender"
+                            android:paddingLeft="@dimen/dp_10">
+
+                            <RadioButton
+                                android:id="@+id/medop_radioMale"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="Male"
+                                android:textSize="@dimen/sp_12"
+                                android:textColor="@color/textPrimary"/>
+
+                            <RadioButton
+                                android:id="@+id/medop_radioFemale"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="Female"
+                                android:textSize="@dimen/sp_12"
+                                android:textColor="@color/textPrimary"/>
+
+                            <RadioButton
+                                android:id="@+id/medop_radioTrans"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="Other"
+                                android:textSize="@dimen/sp_12"
+                                android:textColor="@color/textPrimary"/>
+                        </RadioGroup>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:id="@+id/appintment_book_address_layout"
+                android:visibility="visible"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:orientation="horizontal">
+
+                    <com.fdc.pixelcare.Views.CustomTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@android:color/holo_red_dark"
+                        android:gravity="right"
+                        android:id="@+id/appintment_book_changedate_addrs"
+                        android:padding="@dimen/dp_5"
+                        android:text="Change Date &amp; Time"/>
+
+                    <com.fdc.pixelcare.Views.CustomTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@android:color/holo_red_dark"
+                        android:gravity="right"
+                        android:id="@+id/appintment_book_userinfo_addrs"
+                        android:padding="@dimen/dp_5"
+                        android:layout_marginLeft="@dimen/dp_10"
+                        android:text="Change Patient Info"/>
+                </LinearLayout>
+
+                <com.fdc.pixelcare.Views.CustomTextViewBold
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/sp_14"
+                    android:textColor="@color/textPrimary"
+                    android:gravity="center"
+                    android:padding="@dimen/dp_5"
+                    android:text="Appointment scheduled date &amp; time"/>
+
+                <com.fdc.pixelcare.Views.CustomTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/sp_16"
+                    android:textColor="@color/textPrimary"
+                    android:gravity="center"
+                    android:id="@+id/appintment_book_date_addrs"
+                    android:padding="@dimen/dp_5"
+                    android:text="dd/mm/yyyy"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/colorPrimary"/>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="@dimen/dp_10">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="@dimen/dp_10">
+
+                        <com.fdc.pixelcare.Views.CustomTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:textSize="@dimen/sp_16"
+                            android:textColor="@color/textPrimary"
+                            android:gravity="center"
+                            android:id="@+id/appintment_book_add_addrs"
+                            android:background="@drawable/round_edge_layout"
+                            android:paddingLeft="@dimen/dp_40"
+                            android:paddingTop="@dimen/dp_5"
+                            android:paddingRight="@dimen/dp_40"
+                            android:paddingBottom="@dimen/dp_5"
+                            android:text="+ Add New Address"/>
+
+                        <ImageView
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_gravity="center|right"
+                            android:layout_marginLeft="@dimen/sp_20"
+                            android:id="@+id/appintment_book_addrs_refresh"
+                            android:src="@mipmap/refresh_primary"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <android.support.v7.widget.RecyclerView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/appintment_book_addrs_recyclerview"/>
+            </LinearLayout>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/sp_16"
+                android:textColor="@color/white"
+                android:id="@+id/book_appt_address"
+                android:background="@color/colorPrimary"
+                android:text="ADD ADDRESS"
+                android:layout_marginTop="@dimen/dp_10"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/sp_16"
+                android:textColor="@color/white"
+                android:id="@+id/book_appt_submit"
+                android:background="@color/colorPrimary"
+                android:visibility="gone"
+                android:text="BOOK APPOINTMENT"
+                android:layout_marginTop="@dimen/dp_10"/>
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

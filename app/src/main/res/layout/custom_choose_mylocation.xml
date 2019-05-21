@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_margin="@dimen/dp_20">
+
+    <com.fdc.pixelcare.Views.CustomTextViewSemiBold
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Choose My Location"
+        android:background="@color/colorPrimaryDark"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:paddingTop="@dimen/dp_10"
+        android:paddingBottom="@dimen/dp_10"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/custom_mylocation_gps"
+        android:layout_marginTop="@dimen/dp_20"
+        android:background="@color/backgroundGray"
+        android:padding="@dimen/dp_5"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@mipmap/gps_location"/>
+
+        <com.fdc.pixelcare.Views.CustomTextViewSemiBold
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Use my current location"
+            android:textSize="@dimen/sp_14"
+            android:paddingLeft="@dimen/dp_10"
+            android:textColor="@color/textPrimary"/>
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@mipmap/click_here_icon"/>
+
+    </LinearLayout>
+
+    <com.fdc.pixelcare.Views.CustomTextView
+        android:id="@+id/custom_mylocation_gps_text"
+        android:gravity="left"
+        android:textSize="@dimen/sp_14"
+        android:visibility="gone"
+        android:textColor="@color/textSecondary"
+        android:layout_marginTop="@dimen/dp_5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <com.fdc.pixelcare.Views.CustomTextViewBold
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_10"
+        android:text="( OR )"
+        android:gravity="center"
+        android:textSize="@dimen/sp_14"
+        android:textColor="@color/textPrimary"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/custom_mylocation_city"
+        android:layout_marginTop="@dimen/dp_10"
+        android:background="@color/backgroundGray"
+        android:padding="@dimen/dp_5"
+        android:orientation="horizontal"
+        android:layout_marginBottom="@dimen/dp_2"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@mipmap/city_icon"/>
+
+        <com.fdc.pixelcare.Views.CustomTextViewSemiBold
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Search for locality"
+            android:textSize="@dimen/sp_14"
+            android:paddingLeft="@dimen/dp_10"
+            android:textColor="@color/textPrimary"/>
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@mipmap/drop_down1"/>
+
+    </LinearLayout>
+
+    <com.fdc.pixelcare.Views.CustomTextView
+        android:id="@+id/custom_mylocation_dropdown"
+        android:gravity="left"
+        android:textSize="@dimen/sp_14"
+        android:visibility="gone"
+        android:textColor="@color/textSecondary"
+        android:layout_marginTop="@dimen/dp_5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:id="@+id/custom_specilty_layout"
+        android:visibility="gone"
+        android:layout_marginTop="@dimen/dp_20"
+        android:layout_marginBottom="@dimen/dp_10">
+
+        <com.fdc.pixelcare.Views.CustomTextViewSemiBold
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Choose Specialty"
+            android:background="@color/colorPrimaryDark"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:paddingTop="@dimen/dp_10"
+            android:paddingBottom="@dimen/dp_10"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/custom_specialty_btn"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginTop="@dimen/dp_10" >
+
+            <com.fdc.pixelcare.Views.CustomTextViewSemiBold
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Choose Specialty from List"
+                android:textSize="@dimen/sp_14"
+                android:textColor="@color/textPrimary"/>
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="@dimen/dp_10"
+                android:id="@+id/custom_specialty_show"
+                android:src="@mipmap/next_icon"/>
+
+        </LinearLayout>
+
+        <com.fdc.pixelcare.Views.CustomTextView
+            android:id="@+id/custom_specialty_dropdown"
+            android:gravity="left"
+            android:text="specialty"
+            android:textSize="@dimen/sp_14"
+            android:textColor="@color/textSecondary"
+            android:layout_marginTop="@dimen/dp_5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="CONTINUE"
+        android:id="@+id/custom_submit"
+        android:background="@drawable/round_edge_primary"
+        android:layout_margin="@dimen/dp_20"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp_16"/>
+
+</LinearLayout>

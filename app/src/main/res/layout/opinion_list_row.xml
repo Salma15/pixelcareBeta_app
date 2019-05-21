@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/patient_list_cardview"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/dp_2"
+        android:layout_marginLeft="@dimen/dp_10"
+        android:layout_marginRight="@dimen/dp_10"
+        android:layout_marginTop="8dp"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="4dp"
+        app:cardMaxElevation="6dp"
+        app:contentPadding="10dp">
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+
+            <com.fdc.pixelcare.Views.CustomTextView
+                android:id="@+id/edit_patient_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Name"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="@dimen/sp_16" />
+
+            <com.fdc.pixelcare.Views.CustomTextView
+                android:id="@+id/edit_patient_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@id/edit_patient_name"
+                android:layout_alignBottom="@id/edit_patient_name"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/round_edge_layout_green"
+                android:paddingBottom="@dimen/dp_2"
+                android:paddingLeft="@dimen/dp_10"
+                android:paddingRight="@dimen/dp_10"
+                android:paddingTop="@dimen/dp_2"
+                android:text="Status"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_14" />
+
+            <com.fdc.pixelcare.Views.CustomTextView
+                android:id="@+id/edit_patient_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/edit_patient_name"
+                android:text="Reg ID"
+                android:textColor="@color/textPrimary"
+                android:textSize="@dimen/sp_14" />
+
+            <com.fdc.pixelcare.Views.CustomTextView
+                android:id="@+id/edit_patient_city"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/edit_patient_id"
+                android:text="City"
+                android:textColor="@color/textPrimary"
+                android:textSize="@dimen/sp_14" />
+
+            <LinearLayout
+                android:id="@+id/linearLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/edit_patient_city"
+                android:layout_marginTop="@dimen/dp_5"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:src="@mipmap/doc_icon" />
+
+                <com.fdc.pixelcare.Views.CustomTextView
+                    android:id="@+id/edit_patient_docname"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp_5"
+                    android:text="Doctor Name"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="@dimen/sp_14" />
+            </LinearLayout>
+
+            <com.fdc.pixelcare.Views.CustomTextView
+                android:id="@+id/edit_patient_refondate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/linearLayout"
+                android:layout_alignParentEnd="true"
+                android:text="Resp. On"
+                android:layout_marginLeft="@dimen/dp_5"
+                android:textColor="@color/textPrimary"
+                android:textSize="@dimen/sp_14" />
+
+            <ImageView
+                android:id="@+id/textView2"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:layout_alignTop="@+id/edit_patient_refondate"
+                android:layout_toStartOf="@+id/edit_patient_refondate"
+                android:src="@mipmap/reschedule_icon" />
+
+
+            <!-- <com.fdc.pixelcare.Views.CustomTextView
+                 android:id="@+id/textView2"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_alignBottom="@+id/edit_patient_city"
+                 android:layout_alignParentEnd="true"
+                 android:text=" Created On "
+                 android:textColor="@color/colorPrimaryDark"
+                 android:textSize="@dimen/sp_12" />
+
+             <ImageView
+                 android:id="@+id/calender_icon_plist"
+                 android:layout_width="20dp"
+                 android:layout_height="20dp"
+                 android:layout_alignTop="@id/textView2"
+                 android:layout_toLeftOf="@id/textView2"
+                 android:src="@mipmap/calender_icon" />-->
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+
+</LinearLayout>

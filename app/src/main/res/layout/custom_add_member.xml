@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_margin="@dimen/dp_10">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_20"
+            android:layout_marginRight="@dimen/dp_20">
+
+            <com.fdc.pixelcare.Views.CustomTextViewSemiBold
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                android:textSize="@dimen/sp_18"
+                android:textColor="@color/textPrimary"
+                android:gravity="center"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_10"
+                android:layout_marginBottom="@dimen/dp_10"
+                android:text="Add New Member"
+                android:layout_weight="1" />
+            <ImageView
+                android:id="@+id/addmember_cancel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/cancel_icon" />
+        </LinearLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:textColorHint="@color/textPrimary"
+            android:id="@+id/addmember_name_TL"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_10">
+
+            <com.fdc.pixelcare.Views.CustomEditText
+                android:textSize="@dimen/sp_14"
+                android:textColor="@color/textPrimary"
+               android:id="@+id/addmember_name"
+                android:background="@drawable/edittext_input_line_primary"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter Name"
+                android:singleLine="true"
+                android:inputType="textNoSuggestions" />
+        </android.support.design.widget.TextInputLayout>
+
+        <LinearLayout
+            android:layout_gravity="center"
+            android:orientation="horizontal"
+            android:background="@drawable/edittext_input_line_primary"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_10">
+            <com.fdc.pixelcare.Views.CustomTextView
+                android:textColor="@color/textPrimary"
+                android:gravity="center_vertical"
+                android:clickable="true"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:text="Gender"
+                android:editable="false" />
+            <RadioGroup
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:id="@+id/addmember_radioGroupGender"
+                android:paddingLeft="@dimen/dp_10"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+                <RadioButton
+                    android:textSize="@dimen/sp_12"
+                    android:textColor="@color/textPrimary"
+                    android:id="@+id/addmember_radioMale"
+                    android:layout_width="0.0dip"
+                    android:layout_height="wrap_content"
+                    android:text="Male"
+                    android:layout_weight="1.0" />
+                <RadioButton
+                    android:textSize="@dimen/sp_12"
+                    android:textColor="@color/textPrimary"
+                    android:id="@+id/addmember_radioFemale"
+                    android:layout_width="0.0dip"
+                    android:layout_height="wrap_content"
+                    android:text="Female"
+                    android:layout_weight="1.0" />
+                <RadioButton
+                    android:textSize="@dimen/sp_12"
+                    android:textColor="@color/textPrimary"
+                    android:id="@+id/addmember_radioTrans"
+                    android:layout_width="0.0dip"
+                    android:layout_height="wrap_content"
+                    android:text="Others"
+                    android:layout_weight="1.0" />
+            </RadioGroup>
+        </LinearLayout>
+
+        <com.fdc.pixelcare.Views.CustomEditText
+            android:textSize="@dimen/sp_14"
+            android:textColor="@color/textPrimary"
+            android:textColorHint="@color/textPrimary"
+            android:id="@+id/addmember_age"
+            android:background="@drawable/edittext_input_line_primary"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15.0dip"
+            android:hint="Age"
+            android:singleLine="true"
+            android:inputType="textNoSuggestions" />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_20">
+            <com.fdc.pixelcare.Views.CustomTextView
+                android:textSize="@dimen/sp_16"
+                android:textColor="@color/textPrimary"
+                android:gravity="center_vertical"
+                android:layout_gravity="center"
+                android:clickable="true"
+                android:layout_width="0.0dip"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/dp_5"
+                android:text="Relation Type"
+                android:editable="false"
+                android:layout_weight="0.25" />
+            <RelativeLayout
+                android:orientation="horizontal"
+                android:background="@drawable/spinner_bg"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="3dp"
+                android:layout_weight="0.75">
+                <Spinner
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:id="@+id/addmember_relationSpinner"
+                    android:background="@android:color/transparent"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:spinnerMode="dropdown" />
+                <ImageView
+                    android:layout_gravity="center"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@mipmap/drop"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_20">
+            <com.fdc.pixelcare.Views.CustomTextView
+                android:textSize="@dimen/sp_16"
+                android:textColor="@color/black"
+                android:layout_gravity="center"
+                android:clickable="true"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/dp_10"
+                android:text="DOB"
+                android:editable="false"
+                android:layout_weight="0.25" />
+            <RelativeLayout
+                android:orientation="horizontal"
+                android:background="@drawable/spinner_bg"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="3dp"
+                android:layout_weight="0.75">
+                <com.fdc.pixelcare.Views.CustomTextView
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                    android:textColor="@color/black"
+                    android:gravity="center_vertical"
+                    android:layout_gravity="center"
+                    android:id="@+id/addmember_dob"
+                    android:background="@android:color/transparent"
+                    android:paddingLeft="@dimen/dp_10"
+                    android:paddingRight="@dimen/dp_10"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="--Select Date--"
+                    android:layout_centerVertical="true" />
+                <ImageView
+                    android:layout_gravity="center"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@mipmap/drop"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <com.fdc.pixelcare.Views.CustomTextViewBold
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:id="@+id/addmember_submit"
+            android:background="@drawable/round_edge_primary"
+            android:paddingLeft="@dimen/dp_40"
+            android:paddingTop="@dimen/dp_5"
+            android:paddingRight="@dimen/dp_40"
+            android:paddingBottom="@dimen/dp_5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_40"
+            android:layout_marginTop="@dimen/dp_20"
+            android:layout_marginRight="@dimen/dp_40"
+            android:layout_marginBottom="@dimen/dp_20"
+            android:text="SUBMIT" />
+
+
+    </LinearLayout>
+
+</LinearLayout>

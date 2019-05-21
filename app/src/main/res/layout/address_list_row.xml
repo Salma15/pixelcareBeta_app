@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:background="@color/white"
+        android:layout_margin="@dimen/dp_10">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="9"
+            android:orientation="vertical"
+            android:layout_margin="@dimen/dp_10">
+
+            <com.fdc.pixelcare.Views.CustomTextViewBold
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/sp_16"
+                android:textColor="@color/textPrimary"
+                android:id="@+id/text_address"
+                android:text="Address"/>
+
+            <com.fdc.pixelcare.Views.CustomTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/sp_14"
+                android:textColor="@color/textPrimary"
+                android:id="@+id/text_city"
+                android:layout_marginTop="@dimen/dp_2"
+                android:text="City"/>
+
+            <com.fdc.pixelcare.Views.CustomTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/sp_14"
+                android:textColor="@color/textPrimary"
+                android:id="@+id/text_pincode"
+                android:layout_marginTop="@dimen/dp_2"
+                android:text="Pincode"/>
+
+            <com.fdc.pixelcare.Views.CustomTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/sp_14"
+                android:textColor="@color/textPrimary"
+                android:id="@+id/text_state"
+                android:layout_marginTop="@dimen/dp_2"
+                android:text="State"/>
+
+            <com.fdc.pixelcare.Views.CustomTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/sp_14"
+                android:textColor="@color/textPrimary"
+                android:id="@+id/text_country"
+                android:layout_marginTop="@dimen/dp_2"
+                android:text="Country"/>
+        </LinearLayout>
+
+        <RadioButton
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:id="@+id/radio_address_select"/>
+
+    </LinearLayout>
+
+</LinearLayout>

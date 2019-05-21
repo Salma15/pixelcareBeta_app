@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/login_background"
+    android:orientation="vertical"
+    tools:context=".SplashActivity">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:src="@drawable/splash_banner2"
+        android:visibility="gone" />
+
+    <RelativeLayout
+        android:id="@+id/rel_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/ImageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:src="@drawable/splash_banner3" />
+
+        <com.fdc.pixelcare.Views.CustomTextViewSemiBold
+            android:id="@+id/ImageViewText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/ImageView"
+            android:layout_alignTop="@id/ImageView"
+            android:layout_alignRight="@id/ImageView"
+            android:layout_alignBottom="@id/ImageView"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/dp_30"
+            android:text="FDC Pixel"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="@dimen/sp_28" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/light_gray1"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_gravity="center_vertical|center_horizontal"
+            android:src="@mipmap/pixel_splash" />
+
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/profile_image"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:visibility="gone"
+            android:layout_gravity="center_vertical|center_horizontal"
+            android:src="@mipmap/pixel_splash"
+            app:civ_border_color="@color/light_gray1"
+            app:civ_border_width="0.5dp" />
+
+        <com.fdc.pixelcare.Views.CustomTextViewSemiBold
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_10"
+            android:gravity="center_horizontal"
+            android:text="Pixel Care"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/sp_28" />
+
+    </LinearLayout>
+
+
+</LinearLayout>
