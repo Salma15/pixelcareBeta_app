@@ -242,8 +242,8 @@ public class OpinionListActivity extends AppCompatActivity  implements Response.
                         for (int i = 0; i < jsonArray1.length(); i++) {
                             opinionArraylist.add(new OpinionList(jsonArray1.getJSONObject(i).getInt("pat_id"), jsonArray1.getJSONObject(i).getString("pat_name"),
                                     jsonArray1.getJSONObject(i).getString("pat_age"), jsonArray1.getJSONObject(i).getString("pat_loc"),
-                                    jsonArray1.getJSONObject(i).getInt("pat_status"),"Medisense",
-                                    0,
+                                    jsonArray1.getJSONObject(i).getInt("pat_status"),jsonArray1.getJSONObject(i).getString("pat_doc_name"),
+                                    jsonArray1.getJSONObject(i).getInt("pat_doc_id"),
                                     jsonArray1.getJSONObject(i).getString("pat_refered_by"),
                                     LOGIN_MEMBER_ID,jsonArray1.getJSONObject(i).getString("pat_status_time"),
                                     jsonArray1.getJSONObject(i).getString("patient_addrs"),jsonArray1.getJSONObject(i).getString("pat_state"),

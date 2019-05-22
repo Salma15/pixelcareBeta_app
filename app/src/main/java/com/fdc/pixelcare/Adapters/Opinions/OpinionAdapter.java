@@ -10,6 +10,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 
+import com.fdc.pixelcare.Activities.Opinions.OpinionDetailsActivity;
 import com.fdc.pixelcare.DataModel.OpinionList;
 import com.fdc.pixelcare.R;
 import com.fdc.pixelcare.Views.CustomTextView;
@@ -160,7 +161,7 @@ public class OpinionAdapter extends RecyclerView.Adapter<OpinionAdapter.MyViewHo
         holder.cardViewPatient.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-               /* Intent i3 = new Intent(mContext, OpinionDetailsActivity.class);
+                Intent i3 = new Intent(mContext, OpinionDetailsActivity.class);
                 i3.putExtra("title","Opinion Details");
                 i3.putExtra("PATIENT_ID", patient.getPatientId());
                 i3.putExtra("PATIENT_NAME", patient.getPatientName());
@@ -181,7 +182,7 @@ public class OpinionAdapter extends RecyclerView.Adapter<OpinionAdapter.MyViewHo
                 i3.putExtra("PATIENT_EMAIL",patient.getPatientEmail());
                 i3.putExtra("PATIENT_STATUS",patient.getPatientStatus());
 
-                mContext.startActivity(i3);*/
+                mContext.startActivity(i3);
             }
         });
 

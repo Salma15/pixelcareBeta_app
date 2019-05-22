@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_marginTop="@dimen/dp_5">
+
+    <com.fdc.pixelcare.Views.CustomTextViewSemiBold
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/chat_date"
+        android:layout_gravity="right"
+        android:layout_marginRight="@dimen/dp_10"
+        android:textSize="@dimen/sp_14"
+        android:textColor="@color/textSecondary"/>
+
+    <com.fdc.pixelcare.Views.CustomTextViewSemiBold
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/chat_label"
+        android:layout_gravity="left"
+        android:layout_marginTop="@dimen/dp_2"
+        android:layout_marginLeft="@dimen/dp_10"
+        android:layout_marginRight="@dimen/dp_10"
+        android:textSize="@dimen/sp_14"
+        android:textColor="@color/textSecondary"/>
+
+    <com.fdc.pixelcare.Views.CustomTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/chat_message"
+        android:layout_gravity="left"
+        android:layout_marginTop="@dimen/dp_2"
+        android:layout_marginLeft="@dimen/dp_10"
+        android:layout_marginRight="@dimen/dp_10"
+        android:textSize="@dimen/sp_14"
+        android:textColor="@color/textSecondary"/>
+
+
+</LinearLayout>

@@ -1,0 +1,396 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".Activities.Opinions.OpinionDetailsActivity"
+    tools:showIn="@layout/activity_opinion_details"
+    android:background="@color/light_grey">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_10"
+            android:layout_marginLeft="@dimen/dp_2"
+            android:layout_marginRight="@dimen/dp_2"
+            android:background="@drawable/edittext_input_line_primary"
+            android:orientation="horizontal">
+
+            <com.fdc.pixelcare.Views.CustomTextViewSemiBold
+                android:textSize="@dimen/sp_14"
+                android:textColor="@color/textPrimary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Patient Name: "
+                android:singleLine="true"
+                android:inputType="textNoSuggestions" />
+
+            <com.fdc.pixelcare.Views.CustomTextView
+                android:textSize="@dimen/sp_14"
+                android:textColor="@color/textPrimary"
+                android:id="@+id/pat_name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/edittext_input_line_transparent"
+                android:layout_weight="1"
+                android:inputType="textNoSuggestions" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_10"
+            android:layout_marginLeft="@dimen/dp_2"
+            android:layout_marginRight="@dimen/dp_2"
+            android:background="@drawable/edittext_input_line_primary"
+            android:orientation="horizontal">
+
+            <com.fdc.pixelcare.Views.CustomTextViewSemiBold
+                android:textSize="@dimen/sp_14"
+                android:textColor="@color/textPrimary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Reg. Date: "
+                android:singleLine="true"
+                android:inputType="textNoSuggestions" />
+
+            <com.fdc.pixelcare.Views.CustomTextView
+                android:textSize="@dimen/sp_14"
+                android:textColor="@color/textPrimary"
+                android:id="@+id/pat_regdate"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/edittext_input_line_transparent"
+                android:layout_weight="1"
+                android:inputType="textNoSuggestions" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_10"
+            android:layout_marginLeft="@dimen/dp_2"
+            android:layout_marginRight="@dimen/dp_2"
+            android:background="@drawable/edittext_input_line_primary"
+            android:orientation="horizontal">
+
+            <com.fdc.pixelcare.Views.CustomTextViewSemiBold
+                android:textSize="@dimen/sp_14"
+                android:textColor="@color/textPrimary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Age: "
+                android:singleLine="true"
+                android:inputType="textNoSuggestions" />
+
+            <com.fdc.pixelcare.Views.CustomTextView
+                android:textSize="@dimen/sp_14"
+                android:textColor="@color/textPrimary"
+                android:id="@+id/pat_age"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/edittext_input_line_transparent"
+                android:layout_weight="1"
+                android:inputType="textNoSuggestions" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_10"
+            android:layout_marginLeft="@dimen/dp_2"
+            android:layout_marginRight="@dimen/dp_2"
+            android:background="@drawable/edittext_input_line_primary"
+            android:orientation="horizontal">
+
+            <com.fdc.pixelcare.Views.CustomTextViewSemiBold
+                android:textSize="@dimen/sp_14"
+                android:textColor="@color/textPrimary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Gender: "
+                android:singleLine="true"
+                android:inputType="textNoSuggestions" />
+
+            <com.fdc.pixelcare.Views.CustomTextView
+                android:textSize="@dimen/sp_14"
+                android:textColor="@color/textPrimary"
+                android:id="@+id/pat_gender"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/edittext_input_line_transparent"
+                android:layout_weight="1"
+                android:inputType="textNoSuggestions" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_10"
+            android:layout_marginLeft="@dimen/dp_2"
+            android:layout_marginRight="@dimen/dp_2"
+            android:background="@drawable/edittext_input_line_primary"
+            android:orientation="horizontal">
+
+            <com.fdc.pixelcare.Views.CustomTextViewSemiBold
+                android:textSize="@dimen/sp_14"
+                android:textColor="@color/textPrimary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Hypertension: "
+                android:singleLine="true"
+                android:inputType="textNoSuggestions" />
+
+            <com.fdc.pixelcare.Views.CustomTextView
+                android:textSize="@dimen/sp_14"
+                android:textColor="@color/textPrimary"
+                android:id="@+id/pat_hypertension"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/edittext_input_line_transparent"
+                android:layout_weight="1"
+                android:inputType="textNoSuggestions" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_10"
+            android:layout_marginLeft="@dimen/dp_2"
+            android:layout_marginRight="@dimen/dp_2"
+            android:background="@drawable/edittext_input_line_primary"
+            android:orientation="horizontal">
+
+            <com.fdc.pixelcare.Views.CustomTextViewSemiBold
+                android:textSize="@dimen/sp_14"
+                android:textColor="@color/textPrimary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Diabetes: "
+                android:singleLine="true"
+                android:inputType="textNoSuggestions" />
+
+            <com.fdc.pixelcare.Views.CustomTextView
+                android:textSize="@dimen/sp_14"
+                android:textColor="@color/textPrimary"
+                android:id="@+id/pat_diabetes"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/edittext_input_line_transparent"
+                android:layout_weight="1"
+                android:inputType="textNoSuggestions" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_10"
+            android:layout_marginLeft="@dimen/dp_2"
+            android:layout_marginRight="@dimen/dp_2"
+            android:background="@drawable/edittext_input_line_primary"
+            android:orientation="horizontal">
+
+            <com.fdc.pixelcare.Views.CustomTextViewSemiBold
+                android:textSize="@dimen/sp_14"
+                android:textColor="@color/textPrimary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Address: "
+                android:singleLine="true"
+                android:inputType="textNoSuggestions" />
+
+            <com.fdc.pixelcare.Views.CustomTextView
+                android:textSize="@dimen/sp_14"
+                android:textColor="@color/textPrimary"
+                android:id="@+id/pat_address"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/edittext_input_line_transparent"
+                android:layout_weight="1"
+                android:inputType="textNoSuggestions|textMultiLine" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:background="@color/white">
+
+            <com.fdc.pixelcare.Views.CustomTextViewSemiBold
+                android:textSize="@dimen/sp_16"
+                android:textColor="@color/textPrimary"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_10"
+                android:gravity="center_horizontal"
+                android:text="MEDICAL DETAILS"
+                android:singleLine="true"
+                android:inputType="textNoSuggestions" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_5"
+                android:layout_marginLeft="@dimen/dp_2"
+                android:layout_marginRight="@dimen/dp_2"
+                android:background="@drawable/edittext_input_line_primary"
+                android:orientation="horizontal">
+
+                <com.fdc.pixelcare.Views.CustomTextViewSemiBold
+                    android:textSize="@dimen/sp_14"
+                    android:textColor="@color/textPrimary"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Medical Query: "
+                    android:singleLine="true"
+                    android:layout_gravity="center_vertical"
+                    android:inputType="textNoSuggestions" />
+
+                <com.fdc.pixelcare.Views.CustomTextView
+                    android:textSize="@dimen/sp_14"
+                    android:textColor="@color/textPrimary"
+                    android:id="@+id/pat_medical_query"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/edittext_input_line_transparent"
+                    android:layout_weight="1"
+                    android:inputType="textNoSuggestions|textMultiLine" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_5"
+                android:layout_marginLeft="@dimen/dp_2"
+                android:layout_marginRight="@dimen/dp_2"
+                android:background="@drawable/edittext_input_line_primary"
+                android:orientation="horizontal">
+
+                <com.fdc.pixelcare.Views.CustomTextViewSemiBold
+                    android:textSize="@dimen/sp_14"
+                    android:textColor="@color/textPrimary"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Chief medical Complaint: "
+                    android:singleLine="true"
+                    android:layout_gravity="center_vertical"
+                    android:inputType="textNoSuggestions" />
+
+                <com.fdc.pixelcare.Views.CustomTextView
+                    android:textSize="@dimen/sp_14"
+                    android:textColor="@color/textPrimary"
+                    android:id="@+id/pat_medical_complaint"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/edittext_input_line_transparent"
+                    android:layout_weight="1"
+                    android:inputType="textNoSuggestions|textMultiLine" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_5"
+                android:layout_marginLeft="@dimen/dp_2"
+                android:layout_marginRight="@dimen/dp_2"
+                android:background="@drawable/edittext_input_line_primary"
+                android:orientation="horizontal">
+
+                <com.fdc.pixelcare.Views.CustomTextViewSemiBold
+                    android:textSize="@dimen/sp_14"
+                    android:textColor="@color/textPrimary"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Description: "
+                    android:singleLine="true"
+                    android:layout_gravity="center_vertical"
+                    android:inputType="textNoSuggestions" />
+
+                <com.fdc.pixelcare.Views.CustomTextView
+                    android:textSize="@dimen/sp_14"
+                    android:textColor="@color/textPrimary"
+                    android:id="@+id/pat_description"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/edittext_input_line_transparent"
+                    android:layout_weight="1"
+                    android:inputType="textNoSuggestions|textMultiLine" />
+
+            </LinearLayout>
+
+            <com.fdc.pixelcare.Views.CustomTextViewSemiBold
+                android:textSize="@dimen/sp_16"
+                android:textColor="@color/textSecondary"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_10"
+                android:gravity="center_horizontal"
+                android:text="OPINION HISTORY"
+                android:singleLine="true"
+                android:inputType="textNoSuggestions" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_10"
+                android:layout_marginRight="@dimen/dp_2"
+                android:layout_marginLeft="@dimen/dp_10"
+                android:orientation="horizontal">
+
+                <com.fdc.pixelcare.Views.CustomTextViewSemiBold
+                    android:textSize="@dimen/sp_16"
+                    android:textColor="@color/textPrimary"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/pat_doc_label"
+                    android:singleLine="true"
+                    android:inputType="textNoSuggestions" />
+
+                <com.fdc.pixelcare.Views.CustomTextView
+                    android:textSize="@dimen/sp_16"
+                    android:textColor="@color/textPrimary"
+                    android:id="@+id/pat_doc_name"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:inputType="textNoSuggestions" />
+
+            </LinearLayout>
+
+            <android.support.v7.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="@dimen/dp_10"
+                android:id="@+id/chatresponse_recyclerview">
+
+            </android.support.v7.widget.RecyclerView>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+    </ScrollView>
+</LinearLayout>

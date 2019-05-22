@@ -37,6 +37,7 @@ public class APIClass {
     public static String DRS_HOST_APPOINTMENT_LIST = DRS_HOST+"APPOINTMENT_LIST";
     public static String DRS_HOST_OPINION_LIST = DRS_HOST+"OPINION_LIST";
     public static String DRS_HOST_CONTACT_US = DRS_HOST+"CONTACT_US";
+    public static String DRS_HOST_OPINION_DETAILS = DRS_HOST+"OPINION_DETAILS";
 
     // Doctor Profile Pic Download URL
     public static String DRS_DOCTOR_PROFILE_URL = "http://139.59.99.109/FDCPixel/Contributors/docProfilePic/";

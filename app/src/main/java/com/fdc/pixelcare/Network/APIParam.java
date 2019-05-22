@@ -23,6 +23,9 @@ public class APIParam {
     /* Membership ID */
     public static String KEY_MEMBER_ID = "member_id";
 
+    /* Patient ID */
+    public static String KEY_PATIENT_ID = "patient_id";
+
     /* Hospital ID */
     public static String KEY_HOSPITAL_ID = "hospital_id";
 
