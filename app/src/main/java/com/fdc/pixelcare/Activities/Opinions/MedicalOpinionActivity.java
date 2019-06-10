@@ -1157,6 +1157,8 @@ public class MedicalOpinionActivity extends AppCompatActivity implements View.On
 
                     Intent i1 = new Intent(MedicalOpinionActivity.this, MedicalReportsActivity.class);
                     i1.putExtra("title","Upload Reports");
+                    i1.putExtra("DOC_ID",DOCTOR_ID);
+                    i1.putExtra("DOC_NAME",DOCTOR_NAME);
                     i1.putExtra("CONTACT_PERSON",CONTACT_PERSON);
                     i1.putExtra("MOBILE_NUM",MOBILE_NUM);
                     i1.putExtra("EMAIL_ID",EMAIL_ID);

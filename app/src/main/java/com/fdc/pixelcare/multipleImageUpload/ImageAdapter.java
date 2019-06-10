@@ -56,7 +56,7 @@ public class ImageAdapter extends RecyclerView.Adapter<ImageAdapter.MyViewHolder
         public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
             mSparseBooleanArray.put((Integer) buttonView.getTag(), isChecked);
 
-            Toast.makeText(mContext, getCheckedItems().size()+" Prescription/ Report Selected", Toast.LENGTH_SHORT).show();
+            Toast.makeText(mContext, getCheckedItems().size()+" Report Selected", Toast.LENGTH_SHORT).show();
         }
     };
 

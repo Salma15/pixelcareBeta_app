@@ -39,8 +39,8 @@ public class MedicalReportsActivity extends AppCompatActivity {
     ArrayList<String> selectedItems;
 
     String CONTACT_PERSON, MOBILE_NUM, EMAIL_ID, ADDRESS, CITY, STATE, COUNTRY, AGE, WEIGHT, MEDICAL_COMPLAINT, BRIEF_DESCRIPTION, QUERY_DOCTOR;
-    int SPECIALIZATION_ID = 0;
-    String SPECIALIZATION_NAME = "";
+    int SPECIALIZATION_ID = 0, DOCTOR_ID;
+    String SPECIALIZATION_NAME = "", DOCTOR_NAME;
     String PATIENT_HYPERTENSION = "0", PATIENT_DIABETES = "0";
     String PATIENT_NAME= "", PATIENT_GENDER = "0";
     int PATIENT_ID = 0;
@@ -61,6 +61,8 @@ public class MedicalReportsActivity extends AppCompatActivity {
             String title = b.getString("title");
             setTitle(title);
 
+            DOCTOR_ID = b.getInt("DOC_ID");
+            DOCTOR_NAME = b.getString("DOC_NAME");
             CONTACT_PERSON = b.getString("CONTACT_PERSON");
             MOBILE_NUM = b.getString("MOBILE_NUM");
             EMAIL_ID = b.getString("EMAIL_ID");
@@ -129,10 +131,12 @@ public class MedicalReportsActivity extends AppCompatActivity {
             }
 
 
-            Toast.makeText(MedicalReportsActivity.this,  selectedItems.size() + " Reports Selected", Toast.LENGTH_SHORT).show();
+           // Toast.makeText(MedicalReportsActivity.this,  selectedItems.size() + " Reports Selected", Toast.LENGTH_SHORT).show();
 
             Intent i1 = new Intent(MedicalReportsActivity.this, MedicalOpinionActivity.class);
             i1.putExtra("title","Medical Opinion");
+            i1.putExtra("DOC_ID",DOCTOR_ID);
+            i1.putExtra("DOC_NAME",DOCTOR_NAME);
             i1.putExtra("CONTACT_PERSON",CONTACT_PERSON);
             i1.putExtra("MOBILE_NUM",MOBILE_NUM);
             i1.putExtra("EMAIL_ID",EMAIL_ID);
@@ -204,7 +208,7 @@ public class MedicalReportsActivity extends AppCompatActivity {
             imagecursor.moveToPosition(i);
             int dataColumnIndex = imagecursor.getColumnIndex(MediaStore.Images.Media.DATA);
             imageUrls.add(imagecursor.getString(dataColumnIndex));
-            System.out.println("=====> Array path => "+imageUrls.get(i));
+           // System.out.println("=====> Array path => "+imageUrls.get(i));
         }
         return imageUrls;
     }
